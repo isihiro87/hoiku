@@ -1,0 +1,14 @@
+node_modules
+dist
+.DS_Store
+.env
+
+# Ignore the output video from Git but not videos you import into src/.
+out
+
+# レンダリング用Chrome（Linuxバイナリ・173MBの単一ファイルでGitHubの100MB制限超）
+chrome-headless-shell/
+
+# 生成物の動画（qas.md/tsx + 音声から再生成可能）
+*-output.mp4
+output.mp4
