@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: 'ジャガイモの芽の部分に含まれ、自然毒による食中毒の原因となるものは?',
         choices: ['ソラニン', 'アミラーゼ', 'カゼイン', 'グリコーゲン'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/17-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '調理済みの食品を購入し自宅で食べる形態を何という?',
         choices: ['内食', '中食', '外食', '給食'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/17-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '食中毒予防の三原則として正しい組み合わせは?',
         choices: ['冷やす・温める・乾かす', '付けない・増やさない・やっつける', '洗う・煮る・干す', '買う・作る・残す'],
@@ -52,7 +52,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/17-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '食肉や卵が原因食品になることが多く、熱に弱い食中毒菌は?',
         choices: ['腸炎ビブリオ', 'サルモネラ', 'ノロウイルス', 'ボツリヌス菌'],

@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '欠乏すると夜盲症や角膜乾燥症を起こすビタミンは?',
         choices: ['ビタミンA', 'ビタミンD', 'ビタミンB1', 'ビタミンC'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/08-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: 'ビタミンと欠乏症の組み合わせとして、誤っているものは?',
         choices: ['ビタミンD ― くる病', 'ビタミンB1 ― 脚気', 'ビタミンC ― 壊血病', 'ナイアシン ― 夜盲症'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/08-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '胎児の神経管閉鎖障害のリスク低減に関わる、水溶性ビタミンは?',
         choices: ['ビタミンK', '葉酸', 'ビタミンE', 'ビタミンB2'],
@@ -52,7 +52,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/08-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '体重に占める水分量の割合として、正しい組み合わせは?',
         choices: ['乳児60%・成人80%', '乳児80%・成人60%', '乳児50%・成人70%', '乳児70%・成人50%'],

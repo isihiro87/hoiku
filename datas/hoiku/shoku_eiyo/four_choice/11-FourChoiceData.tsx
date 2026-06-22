@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '1歳頃に育児用ミルクから切り替える時期に、たんぱく質・鉄・ビタミンを補う目的で用いるミルクは?',
         choices: ['ペプチドミルク', 'フォローアップミルク', '液体ミルク', '調製粉乳'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/11-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '生後1週間ごろまでに分泌される乳について、誤っているものは?',
         choices: ['黄白色で粘りがある', 'たんぱく質や無機質を多く含む', '乳糖が多く甘味が強い', '免疫グロブリンなどの感染防御因子を含む'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/11-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '母乳による育児の利点として、誤っているものは?',
         choices: ['乳児に最適な成分組成で代謝負担が少ない', '感染防御因子を含む', '肥満や2型糖尿病の発症リスクを高める', '母子関係の良好な形成'],
@@ -52,7 +52,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/11-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '粉ミルクの調乳について、正しいものは?',
         choices: ['水で溶かすだけでよい', '70℃以上の湯を用いる', '調乳後は常温で長時間保存できる', '月齢ごとに濃度を変える'],

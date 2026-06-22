@@ -19,34 +19,34 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '2021年に成立した、医療的ケア児を支援する法律は?',
         choices: ['母子保健法', '医療的ケア児支援法', '児童福祉法', '障害者総合支援法'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '2021年成立の医療的ケア児支援法。',
         questionAudio: 'audio/explain/50-00-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/50-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '保健計画の作成について正しいものは?',
         choices: ['看護師の責任で作る', '保育にかかわる者全員が共通認識をもつ', '保護者が作る', '嘱託医のみが作る'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '保健計画は保育に関わる者全員が共通認識をもつ。',
         questionAudio: 'audio/explain/50-02-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/50-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '病児保育事業の対象は?',
         choices: ['未就学児のみ', 'おおむね10歳未満児', '乳児のみ', '全年齢'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '病児保育事業の対象はおおむね10歳未満児。',
         questionAudio: 'audio/explain/50-04-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/50-05-voice.wav',

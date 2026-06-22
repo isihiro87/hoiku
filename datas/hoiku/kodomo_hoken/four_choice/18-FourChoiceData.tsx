@@ -19,45 +19,45 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '乳児で主となる呼吸は?',
         choices: ['胸式呼吸', '腹式呼吸', '肩呼吸', '口呼吸'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '乳児は横隔膜を使う腹式呼吸が主。',
         questionAudio: 'audio/explain/18-00-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/18-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '乳児の安静時の呼吸数はおよそ1分間に何回?',
         choices: ['20回', '40回', '60回', '80回'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '乳児の呼吸数は1分間に約40回。',
         questionAudio: 'audio/explain/18-02-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/18-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '乳児の呼吸で主なのは?',
         choices: ['口呼吸', '鼻呼吸', '胸式', '肩呼吸'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '乳児は主に鼻呼吸をする。',
         questionAudio: 'audio/explain/18-04-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/18-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '安静時の乳児の脈拍数はおよそ1分間にいくつ?',
         choices: ['60', '80', '120', '180'],
         correctIndex: 2,
-        explanation: '',
+        explanation: '乳児の脈拍は1分間に約120。',
         questionAudio: 'audio/explain/18-06-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/18-07-voice.wav',

@@ -19,45 +19,45 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '大泉門とは何?',
         choices: ['後方の骨のすき間', '前方の骨のすき間', '耳の穴', '背骨のすき間'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '大泉門は頭頂前方の骨のすき間。',
         questionAudio: 'audio/explain/10-00-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/10-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '身長が出生時の約3倍になるのはおよそ何歳?',
         choices: ['4歳', '8歳', '12歳', '15歳'],
         correctIndex: 2,
-        explanation: '',
+        explanation: '身長は12歳頃に出生時の約3倍になる。',
         questionAudio: 'audio/explain/10-02-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/10-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '2歳未満の身長測定の姿勢は?',
         choices: ['立位', '仰臥位', '腹臥位', '座位'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '2歳未満の身長は仰臥位(寝かせて)測定する。',
         questionAudio: 'audio/explain/10-04-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/10-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '大泉門が閉鎖するのはおよそいつ?',
         choices: ['生後3か月', '1歳半頃', '3歳', '6歳'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '大泉門は1歳半頃までに閉鎖する。',
         questionAudio: 'audio/explain/10-06-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/10-07-voice.wav',

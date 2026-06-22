@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '永久歯に生え変わり始める時期として正しいものは?',
         choices: ['3歳前後', '6歳前後', '9歳前後', '12歳前後'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/13-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '幼児期の間食について、正しいものは?',
         choices: ['1日のエネルギーの30〜40%を目安にする', '1日のエネルギーの10〜20%にとどめる', '量や時間は決めない方がよい', '3〜5歳は午前と午後の2回が基本'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/13-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '学童期の肥満判定に用いられる指数は?',
         choices: ['カウプ指数', 'ローレル指数', 'BMI', '肥満度'],

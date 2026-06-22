@@ -13,8 +13,6 @@ cp "$BASE/audios/09-04-voice.wav" "$TEMP_DIR/audio/explain/"
 cp "$BASE/audios/09-05-voice.wav" "$TEMP_DIR/audio/explain/"
 cp "$BASE/audios/09-06-voice.wav" "$TEMP_DIR/audio/explain/"
 cp "$BASE/audios/09-07-voice.wav" "$TEMP_DIR/audio/explain/"
-cp "$BASE/audios/09-08-voice.wav" "$TEMP_DIR/audio/explain/"
-cp "$BASE/audios/09-09-voice.wav" "$TEMP_DIR/audio/explain/"
 cp public/audio/bgm.mp3 "$TEMP_DIR/audio/"
 [ -f public/audio/finish.wav ] && cp public/audio/finish.wav "$TEMP_DIR/audio/explain/" || true
 cp "$BASE/09-FourChoiceData.tsx" src/FourChoiceData.tsx

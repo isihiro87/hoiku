@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '学校給食法に示される「学校給食の目標」に**含まれない**ものは?',
         choices: ['適切な栄養の摂取による健康の保持増進', '食料の生産・流通・消費について正しい理解に導く', '伝統的な食文化についての理解を深める', '学力テストの成績向上を図る'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/16-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '「5つの期待する子ども像」に**含まれない**ものは?',
         choices: ['お腹がすくリズムのもてる子ども', '好き嫌いがない子ども', '一緒に食べたい人がいる子ども', '食べるものを話題にする子ども'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/16-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '第4次食育推進基本計画の重点事項に**含まれない**ものは?',
         choices: ['生涯を通じた心身の健康を支える食育の推進', '持続可能な食を支える食育の推進', '「新たな日常」やデジタル化に対応した食育の推進', '給食費の無償化の推進'],

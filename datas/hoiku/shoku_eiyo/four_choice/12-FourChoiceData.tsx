@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '1歳未満の乳児に与えてはいけない、ボツリヌス菌混入のおそれがある食品は?',
         choices: ['牛乳', 'はちみつ', '白身魚', 'おかゆ'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/12-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '離乳の開始時期として適当なものは?',
         choices: ['生後2〜3か月頃', '生後5〜6か月頃', '生後9〜10か月頃', '1歳頃'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/12-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '離乳食で用いる魚の進め方として、正しい順序は?',
         choices: ['青皮魚→赤身魚→白身魚', '白身魚→赤身魚→青皮魚', '赤身魚→白身魚→青皮魚', '青皮魚→白身魚→赤身魚'],
@@ -52,7 +52,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/12-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '乳歯が生えそろったときの本数として正しいものは?',
         choices: ['16本', '20本', '28本', '32本'],

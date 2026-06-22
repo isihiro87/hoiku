@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '「食事バランスガイド」で、コマを回すヒモにあたる菓子・嗜好飲料の1日の目安は?',
         choices: ['100kcal以内', '200kcal以内', '400kcal以内', '600kcal以内'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/02-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '「食事バランスガイド」について、正しいものは?',
         choices: ['対象は3歳以上である', '料理区分は3つである', '2005年に厚生労働省と農林水産省が策定した', '量の単位は「グラム」である'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/02-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '「楽しく食べる子どもに〜食からはじまる健やかガイド〜」で示される、発育・発達過程で配慮すべき側面に**含まれない**ものは?',
         choices: ['心と身体の健康', '人との関わり', '食のスキル', '生活の質'],

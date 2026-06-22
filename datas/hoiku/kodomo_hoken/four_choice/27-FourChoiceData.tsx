@@ -19,45 +19,45 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '接触感染の最も重要な対策は?',
         choices: ['予防接種', '手洗い', '換気', '隔離'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '接触感染の基本対策は手洗い。',
         questionAudio: 'audio/explain/27-00-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/27-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: 'ノロウイルスや腸管出血性大腸菌の主な感染経路は?',
         choices: ['空気感染', '経口感染', '接触感染', '飛沫感染'],
         correctIndex: 1,
-        explanation: '',
+        explanation: 'ノロや腸管出血性大腸菌は経口感染する。',
         questionAudio: 'audio/explain/27-02-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/27-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '麻疹で頬粘膜にみられる白い斑点を何という?',
         choices: ['コプリック斑', '苺舌', '紅斑', '水疱'],
         correctIndex: 0,
-        explanation: '',
+        explanation: '麻疹で頬粘膜にできる白い斑点はコプリック斑。',
         questionAudio: 'audio/explain/27-04-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/27-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '妊娠初期の罹患で先天性風疹症候群を起こすのは?',
         choices: ['麻疹', '風疹', '水痘', '突発性発疹'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '妊娠初期の風疹は先天性風疹症候群を起こす。',
         questionAudio: 'audio/explain/27-06-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/27-07-voice.wav',

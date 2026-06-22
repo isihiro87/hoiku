@@ -1,6 +1,6 @@
 import React from 'react';
 import { AbsoluteFill } from 'remotion';
-import { Character } from '../../Character';
+import { Character, genderForTitle } from '../../Character';
 
 export type SubjectTheme =
     | 'history'
@@ -16,7 +16,9 @@ export type SubjectTheme =
     | 'hoiku_shinrigaku'
     | 'kodomo_no_hoken'
     | 'kodomo_no_shokuto_eiyo'
-    | 'hoiku_jissen';
+    | 'hoiku_jissen'
+    // 介護福祉士試験（お試し）
+    | 'ninchisho_rikai';
 
 interface IchimonIttoBoardProps {
     question: string;
@@ -48,6 +50,8 @@ export const themeColors: Record<SubjectTheme, { bg: string; accent: string; tex
     kodomo_no_hoken: { bg: '#E8F5E9', accent: '#43A047', text: '#333' },        // 子どもの保健: 緑
     kodomo_no_shokuto_eiyo: { bg: '#F1F8E9', accent: '#7CB342', text: '#333' }, // 子どもの食と栄養: 黄緑
     hoiku_jissen: { bg: '#E1F5FE', accent: '#039BE5', text: '#333' },           // 保育実習理論: 水色青
+    // 介護福祉士試験
+    ninchisho_rikai: { bg: '#EDE7F6', accent: '#5E35B1', text: '#333' },        // 認知症の理解: 深紫
 };
 
 export const IchimonIttoBoard: React.FC<IchimonIttoBoardProps> = ({
@@ -278,7 +282,7 @@ export const IchimonIttoBoard: React.FC<IchimonIttoBoardProps> = ({
                 alignItems: 'flex-end',
                 justifyContent: 'flex-end',
             }}>
-                <Character isTalking={isTalking} />
+                <Character isTalking={isTalking} gender={genderForTitle(title)} />
             </div>
         </AbsoluteFill>
     );

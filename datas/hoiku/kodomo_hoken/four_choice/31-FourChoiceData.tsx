@@ -19,45 +19,45 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: 'アレルギーの原因となる物質を何という?',
         choices: ['抗体', 'アレルゲン', '抗原虫', '免疫'],
         correctIndex: 1,
-        explanation: '',
+        explanation: 'アレルギーを起こす原因物質をアレルゲンという。',
         questionAudio: 'audio/explain/31-00-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/31-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: 'アナフィラキシーは原因物質との接触後およそ何分以内に起こりやすい?',
         choices: ['5分', '30分', '2時間', '1日'],
         correctIndex: 1,
-        explanation: '',
+        explanation: 'アナフィラキシーは接触後30分以内に起こりやすい。',
         questionAudio: 'audio/explain/31-02-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/31-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: 'エピペンを使用できないのは体重何kg未満の子ども?',
         choices: ['10kg', '15kg', '20kg', '25kg'],
         correctIndex: 1,
-        explanation: '',
+        explanation: 'エピペンは体重15kg未満の子どもには使用できない。',
         questionAudio: 'audio/explain/31-04-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/31-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: 'エピペンの保存方法として正しいものは?',
-        choices: ['冷蔵庫', '室温・遮光(15〜30℃)', '冷凍', '日光のあたる場所'],
+        choices: ['冷蔵庫', '室温・遮光', '冷凍', '日光のあたる場所'],
         correctIndex: 1,
-        explanation: '',
+        explanation: 'エピペンは15〜30℃の室温・遮光で保存する。',
         questionAudio: 'audio/explain/31-06-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/31-07-voice.wav',

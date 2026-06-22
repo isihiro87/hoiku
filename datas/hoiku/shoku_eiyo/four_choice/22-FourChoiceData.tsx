@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '乳幼児の肥満の判定に用いられる指数は?',
         choices: ['ローレル指数', 'カウプ指数', 'BMI', '肥満度'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/22-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '1型糖尿病について、正しいものは?',
         choices: ['インスリンを作る能力が低下またはなくなる', '生活習慣の悪化が主な原因である', '成人にのみ発症する', '食事療法は不要である'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/22-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '食物アレルギーの「特定原材料」8品目に**含まれない**ものは?',
         choices: ['卵', '乳', '大豆', 'くるみ'],
@@ -52,7 +52,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/22-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '食物アレルギーについて、誤っているものは?',
         choices: ['特定原材料は表示義務がある', '大豆油は基本的に除去する', '1歳までに発症することが多い', 'その後寛解することも多い'],

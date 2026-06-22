@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '原因食品が生カキなど二枚貝に多く、85〜90℃で90秒以上の加熱が望まれるものは?',
         choices: ['ブドウ球菌', 'カンピロバクター', 'ノロウイルス', 'O157'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/18-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: 'カレーやシチューの作り置きで起こりやすく、芽胞をつくり100℃でも耐える嫌気性菌は?',
         choices: ['ウェルシュ菌', 'サルモネラ', '腸炎ビブリオ', 'ブドウ球菌'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/18-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '食品添加物の安全性と有効性を確認し、指定する省庁は?',
         choices: ['厚生労働省', '農林水産省', '文部科学省', '消費者庁'],
@@ -52,7 +52,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/18-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '消費期限と賞味期限について、正しいものは?',
         choices: ['消費期限は日持ちが長い食品に表示される', '賞味期限は弁当や惣菜に表示される', '消費期限は製造後おおむね5日以内の食品に表示される', '両者は同じ意味である'],

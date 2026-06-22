@@ -221,6 +221,15 @@ CONFIGS = {
 DEFAULT_GRADE = '中1'
 PLACEHOLDER_DUR = 60
 
+# 選択肢のかっこ書き（補足・言い換え）除去用。半角()・全角（）の両方が対象。
+# 原則: 選択肢にかっこ書きを入れない（補足は解説側へ）。SKILL.md「選択肢のかっこ書き禁止」参照。
+_PAREN_RE = re.compile(r'[（(][^）)]*[）)]')
+
+
+def strip_paren(s):
+    """選択肢テキストからかっこ書きを除去して前後の空白を整える。"""
+    return _PAREN_RE.sub('', s).strip()
+
 
 def parse_md(path):
     """ichimondittou.md を解析。
@@ -274,7 +283,8 @@ def gen_qa_md(cfg, all_q):
     out_lines = []
     for q in all_q:
         q_text = q['question'].replace('「', '').replace('」', '')
-        a_text = q[q['answer']].replace('「', '').replace('」', '')
+        # 答え＝正解の選択肢。選択肢のかっこ書きは除去（選択肢のかっこ書き禁止の原則）。
+        a_text = strip_paren(q[q['answer']].replace('「', '').replace('」', ''))
         out_lines.append(q_text)
         out_lines.append(a_text)
     out = f"{base}/qa.md"
@@ -296,7 +306,8 @@ def gen_tsx(cfg, all_q):
             q_aud_idx = global_i * 2
             a_aud_idx = global_i * 2 + 1
             ans_idx = ord(q['answer']) - ord('A')
-            choices = [q['A'], q['B'], q['C'], q['D']]
+            # 選択肢のかっこ書きは除去（選択肢のかっこ書き禁止の原則）。補足は explanation 側へ。
+            choices = [strip_paren(q['A']), strip_paren(q['B']), strip_paren(q['C']), strip_paren(q['D'])]
             ch = ', '.join(f"'{c}'" for c in choices)
             scenes_str += f"""    {{
         id: 'q{i+1}',

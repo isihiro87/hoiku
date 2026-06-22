@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '家族がそろっていても、それぞれが別々のものを食べることを何という?',
         choices: ['孤食', '個食', '欠食', '中食'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/14-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '学童期について、誤っているものは?',
         choices: ['乳歯から永久歯に生え変わる時期である', '第二発育急進期は平均的に女子の方が早い', '9〜11歳では男子の身長が女子を上回る', '乳児期に次いで成長が著しい'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/14-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '思春期の年齢のおおよその範囲として正しい組み合わせは?',
         choices: ['女子8〜14歳・男子10〜16歳', '女子10〜16歳・男子12〜18歳', '女子12〜18歳・男子14〜20歳', '女子・男子とも10〜18歳'],

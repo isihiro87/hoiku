@@ -19,45 +19,45 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '知能の発達を表す指標は?',
-        choices: ['BMI', 'IQ(知能指数)', 'カウプ指数', 'SQ'],
+        choices: ['BMI', 'IQ', 'カウプ指数', 'SQ'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '知能の発達はIQ(知能指数)で表す。',
         questionAudio: 'audio/explain/17-00-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/17-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: 'デンバー式発達スクリーニング検査の略称は?',
         choices: ['DDST', 'WISC', 'DSM', 'ABR'],
         correctIndex: 0,
-        explanation: '',
+        explanation: 'デンバー式発達スクリーニング検査の略称はDDST。',
         questionAudio: 'audio/explain/17-02-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/17-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '子どもの平熱が成人より高い理由は?',
         choices: ['体表面積が小さい', '新陳代謝が盛ん', '汗をかかない', '筋肉が多い'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '子どもは新陳代謝が盛んなため平熱が高い。',
         questionAudio: 'audio/explain/17-04-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/17-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '健康な乳幼児の腋窩での体温はおよそ何℃前後?',
         choices: ['36℃', '37℃', '38℃', '35℃'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '乳幼児の腋窩体温は37℃前後。',
         questionAudio: 'audio/explain/17-06-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/17-07-voice.wav',

@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '各指針・法律と策定（制定）年の組み合わせとして、正しいものは?',
         choices: ['食生活指針 ― 2005年', '食事バランスガイド ― 2000年', '食育基本法 ― 2005年', '日本人の食事摂取基準（現行版） ― 2010年'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/25-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: 'たんぱく質について、正しいものは?',
         choices: ['最初の消化は小腸で始まる', '窒素を約50%含む', '胃でペプシンにより消化が始まる', '体内で合成されエネルギー源にはならない'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/25-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '子どもの発育の数値について、正しいものは?',
         choices: ['身長は生後3か月で出生時の2倍になる', '4歳で体重は出生時の約5倍になる', '体重は1年で出生時の5倍になる', '身長は1年で出生時の2倍になる'],

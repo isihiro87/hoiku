@@ -19,45 +19,45 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '出生時の身長はおよそ何cm?',
         choices: ['40cm', '50cm', '60cm', '75cm'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '出生時の身長は約50cm。',
         questionAudio: 'audio/explain/06-00-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/06-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '出生時の体重はおよそ何g?',
         choices: ['2000g', '2500g', '3000g', '4000g'],
         correctIndex: 2,
-        explanation: '',
+        explanation: '出生時の体重は約3000g(約3kg)。',
         questionAudio: 'audio/explain/06-02-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/06-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '妊娠22週未満の分娩を何という?',
         choices: ['早産', '流産', '正期産', '死産'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '妊娠22週未満の分娩を流産という。',
         questionAudio: 'audio/explain/06-04-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/06-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '正期産は妊娠何週から何週まで?',
         choices: ['22〜37週', '37〜42週', '40〜44週', '35〜40週'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '正期産は妊娠37週から42週未満。',
         questionAudio: 'audio/explain/06-06-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/06-07-voice.wav',

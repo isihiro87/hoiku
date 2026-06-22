@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '体内で合成できず食事から摂取する必要があるアミノ酸を何という?',
         choices: ['可欠アミノ酸', '必須アミノ酸', '準必須アミノ酸', '制限アミノ酸'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/06-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '常温で固体になりやすく、多くとると血中コレステロールを上昇させる脂肪酸は?',
         choices: ['飽和脂肪酸', '一価不飽和脂肪酸', '多価不飽和脂肪酸', '必須脂肪酸'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/06-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '必須アミノ酸の数として正しいものは?',
         choices: ['5種類', '7種類', '9種類', '20種類'],
@@ -52,7 +52,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/06-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: 'アミノ酸価の低い食品に、不足するアミノ酸を多く含む食品を合わせて栄養価を高めることを何という?',
         choices: ['補足効果', '相乗効果', '相加効果', '代謝効果'],

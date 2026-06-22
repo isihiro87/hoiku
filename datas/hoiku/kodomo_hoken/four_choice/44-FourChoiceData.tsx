@@ -19,45 +19,45 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: 'やけどの応急処置で最初に行うのは?',
         choices: ['薬を塗る', '流水で冷やす', '水ぶくれをつぶす', '軟膏を塗る'],
         correctIndex: 1,
-        explanation: '',
+        explanation: 'やけどはまず流水で十分に冷やす。',
         questionAudio: 'audio/explain/44-00-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/44-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '0歳児の事故で最も多いのは?',
         choices: ['転落', '窒息', '溺水', 'やけど'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '0歳児の事故死で最も多いのは窒息。',
         questionAudio: 'audio/explain/44-02-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/44-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '1〜4歳児の死因順位で第1位は(令和5年)?',
         choices: ['不慮の事故', '先天奇形等', '悪性新生物', '自殺'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '1〜4歳の死因第1位は先天奇形等。',
         questionAudio: 'audio/explain/44-04-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/44-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '子どもの片手を急にひっぱって起こりやすいのは?',
-        choices: ['骨折', '肘内障', '脱臼(肩)', '捻挫'],
+        choices: ['骨折', '肘内障', '脱臼', '捻挫'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '手を急に引くと起こりやすいのは肘内障。',
         questionAudio: 'audio/explain/44-06-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/44-07-voice.wav',

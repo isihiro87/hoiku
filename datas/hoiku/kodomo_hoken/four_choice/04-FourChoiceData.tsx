@@ -19,48 +19,48 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: 'ネグレクトの説明として正しいものは?',
         choices: ['暴言を浴びせる', '育児放棄', '体を傷つける', '性的な行為'],
         correctIndex: 1,
-        explanation: '',
+        explanation: 'ネグレクトは食事や世話をしない育児放棄。',
         questionAudio: 'audio/explain/04-00-voice.wav',
-        questionDuration: 90,
+        questionDuration: 79,
         answerAudio: 'audio/explain/04-01-voice.wav',
-        answerDuration: 90,
+        answerDuration: 39,
     },
-        {
+    {
         id: 'q2',
         question: '嘱託医について正しいものは?',
         choices: ['常勤である', '月に数回の勤務が多い', '保育を担当する', '保護者が雇う'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '嘱託医は非常勤で、月に数回の勤務が多い。',
         questionAudio: 'audio/explain/04-02-voice.wav',
-        questionDuration: 90,
+        questionDuration: 68,
         answerAudio: 'audio/explain/04-03-voice.wav',
-        answerDuration: 90,
+        answerDuration: 66,
     },
-        {
+    {
         id: 'q3',
         question: '児童虐待で最も件数が多いのは?',
         choices: ['身体的虐待', '性的虐待', '心理的虐待', 'ネグレクト'],
         correctIndex: 2,
-        explanation: '',
+        explanation: '児童虐待の相談対応で最も多いのは心理的虐待。',
         questionAudio: 'audio/explain/04-04-voice.wav',
-        questionDuration: 90,
+        questionDuration: 81,
         answerAudio: 'audio/explain/04-05-voice.wav',
-        answerDuration: 90,
+        answerDuration: 49,
     },
-        {
+    {
         id: 'q4',
         question: '虐待が疑われる場合の通告先として正しいものは?',
         choices: ['警察のみ', '市町村又は児童相談所', '学校', '医師会'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '虐待を発見したら市町村又は児童相談所へ通告する。',
         questionAudio: 'audio/explain/04-06-voice.wav',
-        questionDuration: 90,
+        questionDuration: 109,
         answerAudio: 'audio/explain/04-07-voice.wav',
-        answerDuration: 90,
+        answerDuration: 73,
     },
 ];

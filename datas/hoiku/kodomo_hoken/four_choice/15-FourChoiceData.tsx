@@ -19,45 +19,45 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '二語文を話せるようになるのはおよそいつ?',
         choices: ['1歳', '2歳くらい', '4歳', '5歳'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '二語文は2歳頃に話せるようになる。',
         questionAudio: 'audio/explain/15-00-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/15-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '運動機能の発達の正しい順序は?',
         choices: ['寝返り→首のすわり→ひとりすわり', '首のすわり→寝返り→ひとりすわり', 'ひとりすわり→寝返り→首のすわり', '首のすわり→ひとりすわり→寝返り'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '運動発達は首のすわり→寝返り→ひとりすわりの順。',
         questionAudio: 'audio/explain/15-02-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/15-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '把握反射が消えて自発的にものをつかめるのはおよそいつ?',
         choices: ['1か月', '3か月', '6か月', '1歳'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '把握反射が消える生後3か月頃から自分でつかめる。',
         questionAudio: 'audio/explain/15-04-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/15-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '意味のある単語(初語)が出るのはおよそいつ?',
         choices: ['生後6か月', '1歳〜1歳半', '2歳半', '3歳'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '意味のある初語は1歳〜1歳半頃に出る。',
         questionAudio: 'audio/explain/15-06-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/15-07-voice.wav',

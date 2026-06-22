@@ -19,45 +19,45 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: 'ロタウイルスワクチンの接種方法は?',
         choices: ['皮下注射', '経口', '筋肉注射', '経鼻'],
         correctIndex: 1,
-        explanation: '',
+        explanation: 'ロタウイルスワクチンは経口で接種する。',
         questionAudio: 'audio/explain/38-00-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/38-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '注射生ワクチン接種後、次の注射生ワクチンまでの間隔は?',
         choices: ['6日以上', '20日以上', '27日以上', '制限なし'],
         correctIndex: 2,
-        explanation: '',
+        explanation: '注射生ワクチン同士は27日以上あける。',
         questionAudio: 'audio/explain/38-02-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/38-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '子宮頸がん(HPV)ワクチンの主な対象は?',
         choices: ['乳児', '小学校6年〜高校1年相当の女子', '成人男性', '高齢者'],
         correctIndex: 1,
-        explanation: '',
+        explanation: 'HPVワクチンは小6〜高1相当の女子が対象。',
         questionAudio: 'audio/explain/38-04-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/38-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '2012年に生ワクチンから不活化ワクチンに切り替わったのは?',
         choices: ['麻疹', 'ポリオ', '水痘', 'BCG'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '2012年に不活化に切り替わったのはポリオ。',
         questionAudio: 'audio/explain/38-06-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/38-07-voice.wav',

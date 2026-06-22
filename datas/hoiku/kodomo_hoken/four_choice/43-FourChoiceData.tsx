@@ -19,45 +19,45 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: 'ノロウイルスに無効な消毒液は?',
-        choices: ['次亜塩素酸ナトリウム', 'アルコール(消毒用エタノール)', '亜塩素酸水', '加熱'],
+        choices: ['次亜塩素酸ナトリウム', 'アルコール', '亜塩素酸水', '加熱'],
         correctIndex: 1,
-        explanation: '',
+        explanation: 'ノロウイルスにはアルコール消毒が効きにくい。',
         questionAudio: 'audio/explain/43-00-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/43-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '嘔吐物・排泄物の消毒に有効で、金属には使えない消毒液は?',
         choices: ['アルコール', '逆性石けん', '次亜塩素酸ナトリウム', '水'],
         correctIndex: 2,
-        explanation: '',
+        explanation: '嘔吐物の消毒は次亜塩素酸ナトリウム(金属には使えない)。',
         questionAudio: 'audio/explain/43-02-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/43-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '希釈した消毒液の扱いとして正しいものは?',
         choices: ['作り置きする', '毎週作る', 'その都度つくる', '長期保存する'],
         correctIndex: 2,
-        explanation: '',
+        explanation: '希釈消毒液は効果が落ちるためその都度つくる。',
         questionAudio: 'audio/explain/43-04-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/43-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: 'プールの水温の目安は?',
         choices: ['18℃以上', '22℃以上', '28℃以上', '15℃以上'],
         correctIndex: 1,
-        explanation: '',
+        explanation: 'プールの水温は22℃以上が目安。',
         questionAudio: 'audio/explain/43-06-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/43-07-voice.wav',

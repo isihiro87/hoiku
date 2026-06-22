@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '計量スプーンの小さじ1杯の容量として正しいものは?',
         choices: ['3mL', '5mL', '10mL', '15mL'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/19-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '検食（給食の保存）の方法として正しいものは?',
         choices: ['常温で1週間保存する', '50g程度を-20℃以下で2週間以上保存する', '冷蔵庫で3日間保存する', '保存の必要はない'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/19-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '汁物の食塩濃度の目安として一般的なものは?',
         choices: ['0.8%', '2%', '4%', '6%'],

@@ -19,45 +19,45 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '蟯虫(ギョウ虫)の検査方法は?',
         choices: ['血液検査', 'セロハン法', '尿検査', '迅速検査'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '蟯虫検査はセロハンテープ法で行う。',
         questionAudio: 'audio/explain/30-00-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/30-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: 'RSウイルス感染症で重症化しやすいのは?',
         choices: ['成人', '6か月未満の乳児', '学童', '高齢者'],
         correctIndex: 1,
-        explanation: '',
+        explanation: 'RSウイルスは6か月未満の乳児で重症化しやすい。',
         questionAudio: 'audio/explain/30-02-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/30-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '院内感染で問題となる、抗生剤に耐性をもつブドウ球菌は?',
         choices: ['MRSA', 'RS', 'HPV', 'BCG'],
         correctIndex: 0,
-        explanation: '',
+        explanation: '抗生剤に耐性をもつブドウ球菌はMRSA。',
         questionAudio: 'audio/explain/30-04-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/30-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '「水いぼ」と呼ばれるのは?',
         choices: ['伝染性軟属腫', '伝染性膿痂疹', '水痘', '鵞口瘡'],
         correctIndex: 0,
-        explanation: '',
+        explanation: '水いぼは伝染性軟属腫のこと。',
         questionAudio: 'audio/explain/30-06-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/30-07-voice.wav',

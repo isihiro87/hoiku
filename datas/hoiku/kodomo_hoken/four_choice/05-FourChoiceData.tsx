@@ -19,37 +19,37 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '児童虐待による死亡例で最も多い年齢は?',
         choices: ['1歳以下', '3歳', '就学前', '学童'],
         correctIndex: 0,
-        explanation: '',
+        explanation: '虐待死は0歳児(1歳以下)が最も多い。',
         questionAudio: 'audio/explain/05-00-voice.wav',
-        questionDuration: 90,
+        questionDuration: 104,
         answerAudio: 'audio/explain/05-01-voice.wav',
-        answerDuration: 90,
+        answerDuration: 39,
     },
-        {
+    {
         id: 'q2',
         question: '新生児マススクリーニングの目的は?',
         choices: ['虐待発見', '先天性代謝異常症などの早期発見', '知能検査', '視力検査'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '新生児マススクリーニングは先天性代謝異常症などの早期発見が目的。',
         questionAudio: 'audio/explain/05-02-voice.wav',
-        questionDuration: 90,
+        questionDuration: 76,
         answerAudio: 'audio/explain/05-03-voice.wav',
-        answerDuration: 90,
+        answerDuration: 94,
     },
-        {
+    {
         id: 'q3',
         question: '虐待の身体的影響として知られるのは?',
         choices: ['身長促進', '成長ホルモン抑制による成長不全', '視力低下', '難聴'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '虐待のストレスで成長ホルモンが抑制され成長不全を起こす。',
         questionAudio: 'audio/explain/05-04-voice.wav',
-        questionDuration: 90,
+        questionDuration: 89,
         answerAudio: 'audio/explain/05-05-voice.wav',
-        answerDuration: 90,
+        answerDuration: 86,
     },
 ];

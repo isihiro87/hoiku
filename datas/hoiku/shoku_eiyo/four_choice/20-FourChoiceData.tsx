@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '窒息・誤嚥事故の予防について、正しいものは?',
         choices: ['豆・ナッツ類は5歳以下の子どもに与えない', 'ミニトマトはそのまま与える', '食べている時は会話を増やす', '節分の豆まきには袋から出した豆を使う'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/20-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '和食の食器の並べ方として正しいものは?',
         choices: ['主食を右手前、汁物を左手前に置く', '主食を左手前、汁物を右手前に置く', '主食を中央、汁物を奥に置く', '主食と汁物を縦に並べる'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/20-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '保護者がいない児童や虐待を受けている児童が入所する施設は?',
         choices: ['保育所', '乳児院', '児童養護施設', '児童自立支援施設'],

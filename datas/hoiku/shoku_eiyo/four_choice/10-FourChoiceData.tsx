@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '出生時の平均身長と平均体重の組み合わせとして正しいものは?',
         choices: ['約40cm・約2kg', '約50cm・約3kg', '約60cm・約4kg', '約45cm・約2.5kg'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/10-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '新生児に備わっている原始反射で、乳首を強く吸い込む反射は?',
         choices: ['モロー反射', '哺乳反射', '手掌把握反射', '把握反射'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/10-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '乳児の体重について、正しいものは?',
         choices: ['生後2〜3か月で出生時の2倍になる', '生後6か月で出生時の3倍になる', '生後1年で出生時の5倍になる', '出生後は減ることはない'],
@@ -52,7 +52,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/10-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '出生後一時的に出生体重が減少する現象を何という?',
         choices: ['生理的体重減少', '病的体重減少', '脱水', '成長停滞'],

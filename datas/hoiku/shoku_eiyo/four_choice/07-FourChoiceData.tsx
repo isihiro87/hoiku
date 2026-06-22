@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '鉄が欠乏したときに起こりやすい症状は?',
         choices: ['甲状腺機能障害', '鉄欠乏性貧血', '味覚障害', '高血圧'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/07-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: 'カルシウムについて、誤っているものは?',
         choices: ['骨と歯の形成に関わる', '欠乏すると骨粗鬆症を起こしやすい', 'ビタミンDは吸収を促進する', '乳製品より緑黄色野菜の方が吸収率が高い'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/07-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '不足すると味覚障害を起こしやすい無機質は?',
         choices: ['ナトリウム', 'カリウム', '亜鉛', 'ヨウ素'],
@@ -52,7 +52,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/07-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '脂溶性ビタミンの組み合わせとして正しいものは?',
         choices: ['A・B・C・D', 'A・D・E・K', 'B1・B2・C・K', 'C・葉酸・ナイアシン'],

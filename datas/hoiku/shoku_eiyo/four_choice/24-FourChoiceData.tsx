@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '無機質とその欠乏症の組み合わせとして、正しいものは?',
         choices: ['亜鉛 ― 甲状腺機能障害', 'ヨウ素 ― 味覚障害', '鉄 ― 鉄欠乏性貧血', 'カルシウム ― 高血圧'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/24-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '数値の組み合わせとして、誤っているものは?',
         choices: ['脂質のエネルギー　9kcal/g', '乳児の水分割合　約80%', '乳歯の本数　28本', '間食の目安　1日のエネルギーの10〜20%'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/24-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '食中毒の原因と特徴の組み合わせとして、正しいものは?',
         choices: ['腸炎ビブリオ ― 海中にいて食塩濃度3%で増殖', 'ノロウイルス ― 熱に強く加熱では死なない', 'ウェルシュ菌 ― 好気性で酸素を好む', 'サルモネラ ― 熱に強い'],
@@ -52,7 +52,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/24-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: 'ビタミンと多く含む食品の組み合わせとして、誤っているものは?',
         choices: ['ビタミンD ― 魚介類・きのこ類', 'ビタミンA ― レバー・うなぎ・緑黄色野菜', 'ビタミンC ― 果物・野菜・いも類', 'ビタミンB1 ― 海藻・乳製品'],

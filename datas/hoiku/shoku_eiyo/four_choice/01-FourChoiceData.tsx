@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '「食事バランスガイド」のコマの軸（中心）にあたるものは?',
         choices: ['主食', '菓子・嗜好飲料', '水・お茶', '運動'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/01-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '「食生活指針」が初めて策定されたのはいつ?',
         choices: ['1990年', '1995年', '2000年', '2010年'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/01-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '「食生活指針」について、誤っているものは?',
         choices: ['文部省・厚生省・農林水産省が共同で作成した', '2016年に一部改定された', '飲酒はほどほどにとされている', '主食を中心にエネルギーをとるよう示している'],

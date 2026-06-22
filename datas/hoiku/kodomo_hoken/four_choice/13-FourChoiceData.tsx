@@ -19,45 +19,45 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '大きな音などで両上下肢を開いて抱きつく動作をする反射は?',
         choices: ['モロー反射', '探索反射', 'バビンスキー反射', '把握反射'],
         correctIndex: 0,
-        explanation: '',
+        explanation: '大きな音などで手足を広げ抱きつくのはモロー反射。',
         questionAudio: 'audio/explain/13-00-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/13-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '原始反射の多くが消失するのはおよそいつまで?',
         choices: ['生後3〜6か月', '1歳', '2歳', '3歳'],
         correctIndex: 0,
-        explanation: '',
+        explanation: '多くの原始反射は生後3〜6か月で消失する。',
         questionAudio: 'audio/explain/13-02-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/13-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '口唇や口角を刺激すると、その方向に口と頭を向ける反射は?',
         choices: ['モロー反射', '探索反射', '把握反射', '吸啜反射'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '口元の刺激で顔を向けるのは探索(口唇)反射。',
         questionAudio: 'audio/explain/13-04-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/13-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '他の原始反射より遅く、生後24か月頃まで残るのは?',
         choices: ['モロー反射', '把握反射', 'バビンスキー反射', '吸啜反射'],
         correctIndex: 2,
-        explanation: '',
+        explanation: 'バビンスキー反射は生後24か月頃まで残る。',
         questionAudio: 'audio/explain/13-06-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/13-07-voice.wav',

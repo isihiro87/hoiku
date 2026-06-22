@@ -19,48 +19,48 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '新生児死亡とは生後何未満の死亡?',
-        choices: ['1週未満', '4週(28日)未満', '1年未満', '3か月未満'],
+        choices: ['1週未満', '4週未満', '1年未満', '3か月未満'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '新生児死亡は生後4週(28日)未満の死亡。',
         questionAudio: 'audio/explain/02-00-voice.wav',
-        questionDuration: 90,
+        questionDuration: 94,
         answerAudio: 'audio/explain/02-01-voice.wav',
-        answerDuration: 90,
+        answerDuration: 37,
     },
-        {
+    {
         id: 'q2',
         question: '早期新生児死亡とは生後何未満の死亡?',
-        choices: ['1週(7日)未満', '4週未満', '1か月未満', '1年未満'],
+        choices: ['1週未満', '4週未満', '1か月未満', '1年未満'],
         correctIndex: 0,
-        explanation: '',
+        explanation: '早期新生児死亡は生後1週(7日)未満の死亡。',
         questionAudio: 'audio/explain/02-02-voice.wav',
-        questionDuration: 90,
+        questionDuration: 100,
         answerAudio: 'audio/explain/02-03-voice.wav',
-        answerDuration: 90,
+        answerDuration: 37,
     },
-        {
+    {
         id: 'q3',
         question: '周産期死亡は、妊娠22週以後の死産と何をあわせたもの?',
         choices: ['早期新生児死亡', '乳児死亡', '新生児死亡', '幼児死亡'],
         correctIndex: 0,
-        explanation: '',
+        explanation: '周産期死亡は妊娠22週以後の死産と早期新生児死亡の合計。',
         questionAudio: 'audio/explain/02-04-voice.wav',
-        questionDuration: 90,
+        questionDuration: 146,
         answerAudio: 'audio/explain/02-05-voice.wav',
-        answerDuration: 90,
+        answerDuration: 59,
     },
-        {
+    {
         id: 'q4',
         question: '2016年の死因別乳児死亡で最も多いのは?',
         choices: ['不慮の事故', '先天奇形・変形及び染色体異常', '肺炎', '乳幼児突然死症候群'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '乳児死亡の死因第1位は先天奇形・変形及び染色体異常。',
         questionAudio: 'audio/explain/02-06-voice.wav',
-        questionDuration: 90,
+        questionDuration: 121,
         answerAudio: 'audio/explain/02-07-voice.wav',
-        answerDuration: 90,
+        answerDuration: 103,
     },
 ];

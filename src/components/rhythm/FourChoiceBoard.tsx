@@ -1,6 +1,6 @@
 import React from 'react';
 import { AbsoluteFill } from 'remotion';
-import { Character } from '../../Character';
+import { Character, genderForTitle } from '../../Character';
 import { themeColors, SubjectTheme } from './IchimonIttoBoard';
 
 interface FourChoiceBoardProps {
@@ -315,7 +315,7 @@ export const FourChoiceBoard: React.FC<FourChoiceBoardProps> = ({
                 alignItems: 'flex-end',
                 justifyContent: 'flex-end',
             }}>
-                <Character isTalking={isTalking} />
+                <Character isTalking={isTalking} gender={genderForTitle(title)} />
             </div>
         </AbsoluteFill>
     );

@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '「食育基本法」が制定されたのはいつ?',
         choices: ['2000年', '2005年', '2010年', '2015年'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/15-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '食育推進会議が置かれている省庁と会長の組み合わせとして正しいものは?',
         choices: ['厚生労働省・厚生労働大臣', '文部科学省・文部科学大臣', '農林水産省・農林水産大臣', '内閣府・内閣総理大臣'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/15-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '保育所保育指針に示される食育について、誤っているものは?',
         choices: ['「食を営む力」の育成の基礎を培うことを目標とする', '食育計画を全体的な計画に基づいて作成する', '保健師が配置されている場合は専門性を生かした対応を図る', '保育所における食育は重要である'],
@@ -52,7 +52,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/15-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '保育所における食育に関する指針の「食育の5項目」に**含まれない**ものは?',
         choices: ['食と健康', '食と人間関係', '食と文化', '食と経済'],

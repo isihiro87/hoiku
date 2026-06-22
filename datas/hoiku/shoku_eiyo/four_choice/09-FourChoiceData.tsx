@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '「日本人の食事摂取基準（2020年版）」について、正しいものは?',
         choices: ['1〜17歳を成人、18歳以上を小児としている', 'エネルギーの指標はBMIである', '10年ごとに改定される', '病気の人を主な対象としている'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/09-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '食事摂取基準で、栄養素の指標に**含まれない**ものは?',
         choices: ['推定平均必要量', '推奨量', '目安量', '基礎代謝量'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/09-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '基礎代謝基準値を1〜2歳と3〜5歳で比べたとき、正しいものは?',
         choices: ['1〜2歳の方が高い', '3〜5歳の方が高い', '同じである', '性別で逆転する'],

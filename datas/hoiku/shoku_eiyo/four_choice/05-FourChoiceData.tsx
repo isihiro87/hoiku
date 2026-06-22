@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: 'でんぷんに作用し、消化を始める唾液中の消化酵素は?',
         choices: ['ペプシン', 'リパーゼ', 'アミラーゼ', 'トリプシン'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/05-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '乳汁中に含まれ、ぶどう糖とガラクトースが結合した糖は?',
         choices: ['ショ糖', '乳糖', '麦芽糖', '果糖'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/05-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '食物繊維について、誤っているものは?',
         choices: ['水溶性と不溶性の2種類がある', '不溶性食物繊維は腸壁を刺激し便秘改善に役立つ', '水溶性食物繊維は血糖値の上昇を抑える働きがある', '体内でエネルギー源として最も多く利用される'],
@@ -52,7 +52,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/05-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '脂質について、正しいものは?',
         choices: ['水に溶けやすい化合物である', '脂溶性ビタミンの供給源になる', '1gあたり4kcalのエネルギーを産生する', '細胞膜の構成成分にはならない'],

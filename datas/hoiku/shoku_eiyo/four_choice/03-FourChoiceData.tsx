@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: 'むし歯（う歯）の原因菌として知られるものは?',
         choices: ['大腸菌', 'ミュータンス連鎖球菌', 'サルモネラ菌', '乳酸菌'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/03-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '乳幼児栄養調査で、授乳について困っていることの1位は?',
         choices: ['母乳が不足気味', '授乳が負担、大変', '母乳が足りているかわからない', 'ミルクを飲まない'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/03-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '朝食の欠食について、誤っているものは?',
         choices: ['子どもの就寝時刻が遅いほど欠食割合が高い', '親（母）に朝食欠食があると子どもも欠食傾向にある', '菓子・果物のみを食べた場合も欠食に含む', '朝食欠食は乳児期に最も多い'],

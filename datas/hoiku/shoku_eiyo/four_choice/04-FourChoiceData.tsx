@@ -19,7 +19,7 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '1gあたり約9kcalのエネルギーを産生する栄養素は?',
         choices: ['炭水化物', 'たんぱく質', '脂質', 'ビタミン'],
@@ -30,7 +30,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/04-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '五大栄養素に**含まれない**ものは?',
         choices: ['炭水化物', '脂質', '水分', 'ビタミン'],
@@ -41,7 +41,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/04-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '炭水化物について、正しいものは?',
         choices: ['1gあたり約9kcalのエネルギーを産生する', '体内で合成されるため摂取の必要はない', '全エネルギーの約60%を占める', '脂溶性の栄養素である'],
@@ -52,7 +52,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         answerAudio: 'audio/explain/04-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '単糖類に分類されるものは?',
         choices: ['麦芽糖', 'ショ糖', '乳糖', 'ぶどう糖'],

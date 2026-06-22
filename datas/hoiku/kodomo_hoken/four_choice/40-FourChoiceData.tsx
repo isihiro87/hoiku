@@ -19,45 +19,45 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: '鼻出血時の対応として正しいものは?',
         choices: ['上を向かせる', '鼻をつまんで下を向かせる', '首の後ろを叩く', '寝かせる'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '鼻出血は小鼻をつまみ下を向かせる。',
         questionAudio: 'audio/explain/40-00-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/40-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '保育所で薬を預かる時、保護者に持参してもらうのは?',
         choices: ['診断書', '与薬依頼票', '母子健康手帳', '健康保険証'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '保育所で薬を預かるには与薬依頼票が必要。',
         questionAudio: 'audio/explain/40-02-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/40-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: 'インフルエンザの出席停止の基準は?',
-        choices: ['解熱後3日', '発症後5日かつ解熱後2日(幼児3日)', '発疹消失まで', '痂皮化まで'],
+        choices: ['解熱後3日', '発症後5日かつ解熱後2日', '発疹消失まで', '痂皮化まで'],
         correctIndex: 1,
-        explanation: '',
+        explanation: 'インフルは発症後5日かつ解熱後2日(幼児3日)で出席停止解除。',
         questionAudio: 'audio/explain/40-04-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/40-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '麻疹の出席停止の基準は?',
         choices: ['解熱後3日を経過するまで', '発疹消失まで', '痂皮化まで', '主要症状消退後2日'],
         correctIndex: 0,
-        explanation: '',
+        explanation: '麻疹は解熱後3日を経過するまで出席停止。',
         questionAudio: 'audio/explain/40-06-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/40-07-voice.wav',

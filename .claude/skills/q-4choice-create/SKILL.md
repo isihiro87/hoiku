@@ -1,45 +1,48 @@
 ---
 name: q-4choice-create
-description: 英語以外の教科（理科・社会など）の4択クイズ動画を作成するスキル。問題配列やichimondittou.mdからセクション分割・音声準備・FourChoiceData.tsx・render.sh・紹介文を一括生成する。
+description: 保育士試験・社会福祉士試験などの資格対策4択クイズ動画を作成するスキル。問題配列やichimondittou.mdからセクション分割・音声準備・FourChoiceData.tsx・render.sh・紹介文を一括生成する。
 allowed-tools: Read, Write, Edit, Bash
 ---
 
-# 4択クイズ動画作成スキル（非英語教科向け）
+# 4択クイズ動画作成スキル（資格試験対策向け）
 
-英語以外の教科で `FourChoiceShorts` を使った4択クイズ動画を作るためのワークフロー。
-英語grammarフォルダ構成を参考にしつつ、問題・解説とも日本語の前提で組み立てる。
+保育士試験・社会福祉士試験などの**資格対策**で `FourChoiceShorts` を使った4択クイズ動画を作るためのワークフロー。
+**中学・高校の学校教育向けではなく、資格試験の合格対策**を前提に、問題・解説とも日本語で組み立てる。
 
 ## 使用タイミング
 
-- 理科・社会・国語などの4択クイズ動画を作る時
+- 保育士試験・社会福祉士試験などの資格科目の4択クイズ動画を作る時
 - ユーザーから問題配列（JS/JSON形式）を渡されて、それをファイル化する時
 - 既存の4択ソース（ichimondittou.md）をクリーンアップ・再分割する時
 - 既に投稿済みの動画があるフォルダで一部だけ再構成する時（ロック対応）
 
-英語文法4択は `/g-prepare`・`/g-render` を使うこと（このスキルではない）。
+> **問題内容のレビュー・修正基準**は `CONTENT_RULES.md`（同フォルダ）を参照。選択肢の作り方・誤答の質・問題文に答えを透けさせない等の確立済み規則をまとめてある。
 
 ---
 
 ## フォルダ構成
 
+資格科目（保育士試験 筆記9科目など）ごとに `four_choice` フォルダで管理する。
+
 ```
-datas/[教科]/[学年]/[章]/[トピック]/quiz/4choice/
+datas/hoiku/[科目]/four_choice/
 ├── ichimondittou.md            # ソース（4択形式）
 ├── qa.md                       # 音声収録用（問題/答え交互の単純形式）
 ├── audios/                     # 音声配置先
-│   ├── 00-voice.wav            # Q1（推奨：voice 固定。topic_label は使わない）
-│   ├── 01-voice.wav            # A1
-│   └── ...                     # 偶数=問題、奇数=答え/解説
-├── 01-FourChoiceData.tsx       # セクションごとのデータ
-├── 01-render.sh                # レンダリングスクリプト
-├── 01-output.mp4               # 出力動画
-├── 01-post_youtube.txt         # YouTube紹介文
-├── 01-post_instagram.txt       # Instagram紹介文
-├── 02-… 03-… …
+│   ├── 06-00-voice.wav         # セクション06のQ1
+│   ├── 06-01-voice.wav         # セクション06のA1
+│   └── ...                     # 偶数=問題、奇数=答え/解説（セクション番号-クリップ番号）
+├── 06-FourChoiceData.tsx       # セクションごとのデータ
+├── 06-render.sh                # レンダリングスクリプト
+├── 06-output.mp4               # 出力動画
+├── 06-post_instagram.txt       # Instagram紹介文
+├── 07-… 08-… …
 └── update_duration.py          # 音声配置後にdurationを実音声から更新するヘルパー
 ```
 
-**音声ファイル名のルール**: `XX-voice.wav` を推奨（`XX-[topic].wav` でも可だが、ユーザーは `voice` 表記を好む）。`gen_4choice.py` の CONFIGS で `'topic': 'voice'` を指定する。
+[科目] は保育士9科目スラッグ（`hoiku_genri` / `kyoiku_genri` / `shakai_teki_yogo` / `kodomo_katei_fukushi` / `shakai_fukushi` / `hoiku_shinrigaku` / `kodomo_no_hoken` / `kodomo_no_shokuto_eiyo` / `hoiku_jissen`）。社会福祉士など他資格を足す場合は `SubjectTheme`（`src/components/rhythm/IchimonIttoBoard.tsx`）に色を追加する。
+
+**音声ファイル名のルール**: `NN-MM-voice.wav`（NN=セクション番号、MM=クリップ通し番号 00始まり、Q/A交互）。`gen_4choice.py` の CONFIGS で `'topic': 'voice'` を指定する。
 
 ---
 
@@ -71,27 +74,27 @@ Q: ...
 |------|------|
 | `次のうち、〜はどれか？` | `〜は？` または `〜はどれ？` |
 | `〜とは何というか？` | `〜とは何という？` |
-| `〜はどのなかまか？` | `〜のなかまは？` |
-| `〜は何本か？` | `〜は何本？` |
-| `〜は何で呼吸するか？` | `〜の呼吸は？` |
+| `〜を定めた法律は何か？` | `〜を定めた法律は？` |
+| `〜は何条か？` | `〜は何条？` |
+| `〜が制定されたのは何年か？` | `〜の制定は何年？` |
 | `〜として正しいものはどれか？` | `〜は？` |
 | `〜にあてはまるのはどれか？` | `〜にあてはまるのはどれ？` |
 | `〜理由として最も適切なのはどれか？` | `〜理由は？` |
 | `〜理由はなぜ？` | `〜理由は？` |
-| `〜は主にどのなかま？` | `〜のなかまは？` |
+| `〜を所管する省庁はどこか？` | `〜の所管は？` |
 
-**語尾原則**: 「○○は？」「何という？」「どれ？」「何本？」「何で分ける？」 のいずれかで終える。「か」「なぜ」は使わない。
+**語尾原則**: 「○○は？」「何という？」「どれ？」「何条？」「何年？」 のいずれかで終える。「か」「なぜ」は使わない。
 
 ### 問題文の明瞭さ（不明瞭な短縮を避ける）
 
-短縮しすぎて意味が壊れたら本末転倒。例えば「動物を何に分ける基準か？」を「何で分ける？」と省略すると主語が消えて意味不明になる。**主語と目的語は最低限残す**:
+短縮しすぎて意味が壊れたら本末転倒。例えば「保育所を定める法律は？」を「定める法律は？」と省略すると主語が消えて意味不明になる。**主語と目的語は最低限残す**:
 
 | ❌ NG（不明瞭） | ✅ OK |
 |------|------|
-| `「背骨があるかどうか」は何で分ける？` | `動物を背骨の有無で分けると？` |
-| `〜分類するときに使う基準でないのは？` | `〜の分類で使わない基準は？` |
-| `〜にあてはまる分類は？` | `〜のなかまは？` |
-| `〜の出入り口を何という？`（説明文長い） | `〜にある出入り口を何という？` |
+| `根拠となるのは？`（主語なし） | `保育所の根拠となる法律は？` |
+| `〜に該当しないものは？`（対象不明） | `児童福祉施設でないものは？` |
+| `〜にあてはまる制度は？` | `この給付にあたる制度は？` |
+| `〜を担う機関を何という？`（説明文長い） | `市町村に置かれる相談機関は？` |
 
 ### 重複ルール
 
@@ -102,33 +105,49 @@ Q: ...
 
 ### 誤答（distractor）の質ルール
 
-**動物の問題に植物用語を混ぜない**。逆も同様。誤答は同じドメイン内の用語にする:
+**問われている分野（法律・制度・人物・年号など）と別カテゴリの語を誤答に混ぜない**。誤答は同じドメイン内の「もっともらしい誤り」にする:
 
 | ❌ NG（ドメイン混在） | ✅ OK |
 |------|------|
-| 動物分類問題に `胚珠`/`胞子`/`子房`/`花粉` | 動物の体の部位（`鼻孔`/`口`/`えら`等） |
-| 動物の体構造に `頭・根・葉` | 動物の体の組合せ（`頭・腹・足` 等） |
-| 動物分類の選択肢に `合弁花類`/`単子葉類` | 動物分類軸（`卵生と胎生`/`恒温と変温` 等） |
-| 呼吸法に `外骨格`（呼吸じゃない） | `肺だけ`/`気門だけ`/`皮ふだけ` 等 |
-| 鳥類の体表に `貝がら`（軟体動物） | `毛`/`うろこ`/`湿った皮ふ` |
+| 法律を問うのに誤答が `厚生労働省`/`保育士`（法律でない） | 同種の法律名（`児童福祉法`/`母子保健法`/`教育基本法` 等） |
+| 年号を問うのに誤答が `第11条`/`30条`（条文番号） | 近接する別の年号（`1947年`/`1951年`/`1989年` 等） |
+| 制度名を問うのに誤答が人名（カテゴリ違い） | 紛らわしい別制度名でそろえる |
+| 所管省庁を問うのに誤答が `児童相談所`（機関であり省庁でない） | `内閣府`/`文部科学省`/`厚生労働省` 等の省庁 |
+| 人物を問うのに誤答が著作名 | 同時代・同分野の別人物名でそろえる |
 
-「不正解だが惜しい」誤答ほど良問になる。**他カテゴリの紛らわしい用語**を選ぶ。
+「不正解だが惜しい」誤答ほど良問になる。**同カテゴリで受験者が混同しやすい用語**を選ぶ。
+
+### 選択肢のかっこ書き禁止（原則）
+
+**選択肢（A/B/C/D）の中にかっこ書き（補足・言い換え）を入れない**。読みやすさを損ない、表示と音声がずれる原因になる（音声＝qa.md は補足なしで読み上げるため、tsx 側だけかっこが残ると不一致になる）。補足が必要なら **解説（`解説:` / `explanation`）側に書く**。
+
+| ❌ NG（選択肢にかっこ） | ✅ OK |
+|------|------|
+| `4週(28日)未満` | `4週未満` |
+| `IQ(知能指数)` | `IQ` |
+| `室温・遮光(15〜30℃)` | `室温・遮光` |
+| `アルコール(消毒用エタノール)` | `アルコール` |
+| `脱臼(肩)` | `脱臼` |
+
+- かっこは半角 `()`・全角 `（）` の両方が対象。
+- 問題文（`Q:`）や解説（`解説:`）のかっこは可（必要な補足はそちら側に寄せる）。
+- `gen_4choice.py` は選択肢（および qa.md の答え）からかっこ書きを自動除去する（下記「重要な実装ポイント」参照）。手書きで ichimondittou.md を作る時もこの原則を守る。
 
 ### セクション分割ルール
 
 - **1セクション 3〜4問**（2問は少ない、5問以上は多い）
 - 問題数が合わない場合は隣接トピックを統合 or 再分割
-- セクション名は具体的に（例: 「両生類のからだ」）
+- セクション名は具体的に（例: 「児童福祉法の基礎」「世界人権宣言と国際条約」）
 
 ### セクション内の話題分散（連続同類を避ける）
 
-1つの動画（セクション）内で**同じカテゴリの問題が連続しないようにする**。例えば「ホニュウ類」が3問連続するセクションは退屈。各セクションは異なる動物分類のなかま分けが混在するように設計する:
+1つの動画（セクション）内で**同じ形式・同じ論点の問題が連続しないようにする**。例えば年号当てが3問連続するセクションは単調。各セクションは問い方（年号・条文・制度名・人物など）が混在するように設計する:
 
-| ❌ NG（同カテゴリ連続） | ✅ OK（カテゴリ分散） |
+| ❌ NG（同カテゴリ連続） | ✅ OK（論点分散） |
 |------|------|
-| Section 06: ホニュウ類×3問 | Section 06: 魚類, 両生類, 鳥類, ホニュウ類 (4分類混在) |
+| Section 06: 年号当て×3問 | Section 06: 採択年, 条文数, 条約名, 子どもの権利条約の年 (論点混在) |
 
-複数セクションを設計する時は、似た問題（基本問題、例で問う問題、特徴判別問題）が**異なるセクションに分散**されるよう配置する。
+複数セクションを設計する時は、似た問題（基本問題、年号問題、人物問題、制度判別問題）が**異なるセクションに分散**されるよう配置する。
 
 ---
 
@@ -155,8 +174,8 @@ python3 .claude/skills/q-4choice-create/scripts/gen_4choice.py [topic_key]
 生成されるもの:
 - `qa.md`（音声収録用、問題/答え交互、シンプル形式）
 - `XX-FourChoiceData.tsx`（durationはプレースホルダ60、`japanese` なし）
-- `XX-render.sh`（`--props '{"subject":"science"}'` 等）
-- `XX-post_youtube.txt` / `XX-post_instagram.txt`
+- `XX-render.sh`（`--props '{"subject":"kyoiku_genri"}'` 等、科目スラッグを指定）
+- `XX-post_instagram.txt`
 - `update_duration.py`
 
 ### ステップ3: 音声をユーザーが収録
@@ -167,7 +186,7 @@ python3 .claude/skills/q-4choice-create/scripts/gen_4choice.py [topic_key]
 ### ステップ4: durationを更新
 
 ```bash
-python3 [4choice_folder]/update_duration.py
+python3 [four_choiceフォルダ]/update_duration.py
 ```
 
 各 `XX-FourChoiceData.tsx` の `questionDuration` / `answerDuration` を実音声から計算して書き換える。
@@ -179,7 +198,7 @@ python3 [4choice_folder]/update_duration.py
 ```bash
 cd /workspaces/hoiku_shiken
 for i in 01 02 03 04 05 06 07; do
-  bash datas/.../4choice/${i}-render.sh
+  bash datas/hoiku/[科目]/four_choice/${i}-render.sh
 done
 ```
 
@@ -194,7 +213,7 @@ done
 ```bash
 # 1. ロック対象をバックアップ
 mkdir -p /tmp/locked_NN
-cp [4choice_folder]/NN-* /tmp/locked_NN/
+cp [four_choiceフォルダ]/NN-* /tmp/locked_NN/
 
 # 2. ichimondittou.md を編集（ロック対象セクションの問題は変えない）
 
@@ -202,11 +221,11 @@ cp [4choice_folder]/NN-* /tmp/locked_NN/
 python3 .claude/skills/q-4choice-create/scripts/gen_4choice.py [topic_key]
 
 # 4. ロック対象が変わっていないか確認
-diff /tmp/locked_NN/NN-FourChoiceData.tsx [4choice_folder]/NN-FourChoiceData.tsx
-diff /tmp/locked_NN/NN-render.sh [4choice_folder]/NN-render.sh
+diff /tmp/locked_NN/NN-FourChoiceData.tsx [four_choiceフォルダ]/NN-FourChoiceData.tsx
+diff /tmp/locked_NN/NN-render.sh [four_choiceフォルダ]/NN-render.sh
 
 # 5. 差分があればバックアップから復元
-cp /tmp/locked_NN/NN-* [4choice_folder]/
+cp /tmp/locked_NN/NN-* [four_choiceフォルダ]/
 ```
 
 **重要**: `gen_4choice.py` は連番tsx/sh/txtを全削除して再生成する。.mp4 と .py は保護対象。スクリプトの該当箇所:
@@ -243,7 +262,7 @@ ichimondittou.md を後から修正したとき、音声の再録が必要なケ
 
 ### `japanese` フィールドの optional 化（実施済み）
 
-理科などで `japanese` を省略するため、interface と board を以下の通り改修:
+資格科目では `japanese`（英単語の和訳欄）が不要なため省略する。interface と board を以下の通り改修済み:
 
 `src/FourChoiceData.tsx` の interface:
 ```typescript
@@ -261,32 +280,43 @@ japanese?: string;
 
 各セクションの `XX-FourChoiceData.tsx` 内の interface も `japanese?: string` に揃える必要あり（`gen_4choice.py` で生成済み）。
 
+### 選択肢のかっこ書き自動除去（実施済み）
+
+`gen_4choice.py` に `strip_paren()` を実装。`gen_tsx` の `choices` と `gen_qa_md` の答え（正解の選択肢）から半角 `()`・全角 `（）` のかっこ書きを除去する。これにより「選択肢のかっこ書き禁止（原則）」が再生成のたびに自動で担保される。問題文（`question`）・解説（`explanation`）のかっこは除去対象外。
+
 ### 音声ファイル命名
 
 `XX-voice.wav`（Q/A交互、00からの通し番号、フラット構造）
 
 ### qa.md（音声収録用ファイル）
 
-**他の理科/社会フォルダのqa.mdと同じシンプル形式**:
+**他の科目フォルダのqa.mdと同じシンプル形式**:
 - コメント・見出しなし
 - 1行目=問題1、2行目=答え1、3行目=問題2、…
 - 鍵カッコ「」は除去（VOICEPEAK読み上げで余分な間が出るため）
 - 答え行は4択の正解（`answer:` で示された選択肢の中身。**解説ではない**）
 
-### subject prop（教科色）
+### subject prop（科目色）
 
-`render.sh` の `--props` で教科色を切り替え:
-- `'{"subject":"science"}'` → 薄緑+緑系
-- `'{"subject":"history"}'` → クリーム+オレンジ
-- `'{"subject":"english"}'` → 薄青+青
-- `'{"subject":"math"}'` → 薄紫+紫
+`render.sh` の `--props` で科目色を切り替え。保育士9科目のスラッグを指定する:
+- `'{"subject":"hoiku_genri"}'` → 保育原理（紫）
+- `'{"subject":"kyoiku_genri"}'` → 教育原理（藍）
+- `'{"subject":"shakai_teki_yogo"}'` → 社会的養護（ティール）
+- `'{"subject":"kodomo_katei_fukushi"}'` → 子ども家庭福祉（オレンジ）
+- `'{"subject":"shakai_fukushi"}'` → 社会福祉（赤）
+- `'{"subject":"hoiku_shinrigaku"}'` → 保育の心理学（濃ピンク）
+- `'{"subject":"kodomo_no_hoken"}'` → 子どもの保健（緑）
+- `'{"subject":"kodomo_no_shokuto_eiyo"}'` → 子どもの食と栄養（黄緑）
+- `'{"subject":"hoiku_jissen"}'` → 保育実習理論（水色青）
 
-`themeColors` 定義は `src/components/rhythm/IchimonIttoBoard.tsx`。
+`themeColors` / `SubjectTheme` 定義は `src/components/rhythm/IchimonIttoBoard.tsx`。社会福祉士など他資格を追加する場合はここに新スラッグと色を足す。
 
 ### titleData / subtitleData
 
-- `titleData = '中[学年]　[教科]'`（例: `'中1　理科'`）
-- `subtitleData = '[ジャンル]4択'`（例: `'生物4択'`）
+- `titleData = '[資格名]　[科目]'`（例: `'保育士　教育原理'`）
+- `subtitleData = '4択クイズ'`
+
+> **登場キャラの性別は `titleData` で自動判定**（`src/Character.tsx` の `genderForTitle`）。`社会福祉士` を含むと**男性**（`assets/char_man`）、それ以外（保育士など）は**女性**（`assets/char_woman`）。資格名の表記を変える際は注意。
 
 ### レンダリングの実行ディレクトリ
 
@@ -310,8 +340,7 @@ cd /workspaces/hoiku_shiken && bash datas/.../NN-render.sh
 
 ## 既存実装の参照
 
-- 英語grammar（参考元）: `datas/english/grade1/unit_01/quiz/grammar/`
-- 理科一問一答（音声命名・qa.md形式の参考元）: `datas/science/grade1/1-3/1vertebrate/quiz/`
-- 本スキルで作成した例:
-  - `datas/science/grade1/1-3/1vertebrate/quiz/4choice/`（7セクション、Section 01投稿済みでロック）
-  - `datas/science/grade1/1-3/2invertebrate/quiz/4choice/`（7セクション、未着手）
+- 教育原理4択（本スキルで作成済みの実例）: `datas/hoiku/kyoiku_genri/four_choice/`
+- 子どもの保健4択: `datas/hoiku/kodomo_hoken/four_choice/`
+- 子どもの食と栄養4択: `datas/hoiku/shoku_eiyo/four_choice/`
+- ○×一問一答（同じ音声命名・qa.md形式の参考）: `datas/hoiku/[科目]/[NN_トピック]/quiz/`

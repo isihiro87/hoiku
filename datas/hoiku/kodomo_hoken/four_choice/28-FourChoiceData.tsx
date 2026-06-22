@@ -19,45 +19,45 @@ export interface FourChoiceScene {
 }
 
 export const fourChoiceData: FourChoiceScene[] = [
-        {
+    {
         id: 'q1',
         question: 'おたふくかぜ(流行性耳下腺炎)の別名は?',
         choices: ['ムンプス', 'ヘルパンギーナ', 'プール熱', 'はしか'],
         correctIndex: 0,
-        explanation: '',
+        explanation: '流行性耳下腺炎はムンプスとも呼ぶ。',
         questionAudio: 'audio/explain/28-00-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/28-01-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q2',
         question: '突発性発疹の原因は?',
         choices: ['アデノウイルス', 'ヒトヘルペス6型・7型', 'コクサッキー', 'パルボウイルス'],
         correctIndex: 1,
-        explanation: '',
+        explanation: '突発性発疹の原因はヒトヘルペスウイルス6型・7型。',
         questionAudio: 'audio/explain/28-02-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/28-03-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q3',
         question: '「りんご病」とも呼ばれる感染症は?',
         choices: ['溶連菌感染症', '伝染性紅斑', '手足口病', '突発性発疹'],
         correctIndex: 1,
-        explanation: '',
+        explanation: 'りんご病は伝染性紅斑のこと。',
         questionAudio: 'audio/explain/28-04-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/28-05-voice.wav',
         answerDuration: 90,
     },
-        {
+    {
         id: 'q4',
         question: '伝染性紅斑(りんご病)の原因は?',
         choices: ['ヒトパルボウイルス', 'アデノウイルス', '溶連菌', 'コクサッキー'],
         correctIndex: 0,
-        explanation: '',
+        explanation: '伝染性紅斑の原因はヒトパルボウイルスB19。',
         questionAudio: 'audio/explain/28-06-voice.wav',
         questionDuration: 90,
         answerAudio: 'audio/explain/28-07-voice.wav',
