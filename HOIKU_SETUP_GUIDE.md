@@ -97,6 +97,25 @@ hoiku: { bg: '#F3E5F5', accent: '#9C27B0', text: '#333' }, // 保育士: 紫系
 
 ---
 
+## 別PCで作業する（環境の引き継ぎ）
+
+git 経由で同期する。生成済み音声(.wav)・データ・ソースは git に入っているので、基本は以下だけ。
+
+```bash
+git clone https://github.com/isihiro87/hoiku.git
+# devcontainer で開く → 起動後に
+npm install
+```
+
+注意点:
+
+- **`chrome-headless-shell/`（約251MB）は gitignore 済みで転送されない。** ただし手動コピー不要。
+  - `npm run dev`（Studio）と `npx remotion render` は remotion 同梱の Chrome を自動DLして動く（`remotion.config.ts` がフォールバック）。
+  - `render.sh` / `build_videos.py` / `gen_4choice.py` も「同梱Chromeが在れば使い、無ければ自動DLを使う」よう条件分岐済み。
+  - もし devcontainer 同梱の高速Chromeを別PCにも置きたい場合のみ、元PCの `chrome-headless-shell/` をそのままコピーする。
+- **新規の音声生成には Voicepeak（ホストアプリ）が別PC側にも必要**。`.vpp` はプロジェクト、生成済み `.wav` のみ git 同期される。
+- 作業後は `git add -A && git commit && git push` で元PCに戻す。
+
 ## 進め方の想定
 
 1. まず1セット（例: 保育原理の児童福祉法）を `qas.md` から作って動作確認。

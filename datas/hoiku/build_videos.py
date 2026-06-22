@@ -69,11 +69,17 @@ cp "$QUIZ_DIR"/audios/*.wav "$TEMP_DIR/audio/explain/"
 cp public/audio/bgm.mp3 "$TEMP_DIR/audio/"
 cp "$QUIZ_DIR/IchimonIttoData.tsx" src/IchimonIttoData.tsx
 
+# 同梱Chromeが在る環境（devcontainer）ではそれを使い、無い環境（別PC等）では
+# remotion同梱のChromeを自動利用する。これで環境ごとの手動切替が不要。
+CHROME="{CHROME}"
+BROWSER_FLAG=""
+if [ -x "$CHROME" ]; then BROWSER_FLAG="--browser-executable $CHROME"; fi
+
 echo "=== {os.path.basename(os.path.dirname(quizdir))} レンダリング開始 ==="
 PUPPETEER_HEADLESS_MODE=new npx remotion render src/index.ts IchimonIttoShorts \\
   "$QUIZ_DIR/output.mp4" \\
   --public-dir "$TEMP_DIR" \\
-  --browser-executable {CHROME} \\
+  $BROWSER_FLAG \\
   --props '{{"subject":"{subject}","subtitle":"○か×クイズ"}}' \\
   --disable-chrome-sandbox \\
   --concurrency 4 \\
