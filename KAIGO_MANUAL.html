@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>介護福祉士 4択クイズ動画 作成マニュアル</title>
+<style>
+  :root{
+    --accent:#5E35B1;      /* 認知症の理解テーマの深紫に合わせる */
+    --accent-light:#EDE7F6;
+    --ok:#2e7d32;
+    --warn:#e65100;
+    --danger:#c62828;
+    --ink:#222;
+    --muted:#666;
+    --line:#e3e3e3;
+    --code-bg:#1e1e2e;
+    --code-ink:#e6e6e6;
+  }
+  *{box-sizing:border-box;}
+  body{
+    font-family:-apple-system,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic UI",Meiryo,sans-serif;
+    color:var(--ink); line-height:1.85; margin:0; background:#f7f6fb;
+  }
+  .wrap{max-width:920px; margin:0 auto; padding:0 20px 80px;}
+  header{
+    background:linear-gradient(135deg,var(--accent),#7e57c2);
+    color:#fff; padding:38px 20px 30px; text-align:center;
+  }
+  header h1{margin:0 0 6px; font-size:1.7rem;}
+  header p{margin:0; opacity:.92; font-size:.98rem;}
+  .badge{display:inline-block; background:rgba(255,255,255,.2); border-radius:20px;
+    padding:3px 14px; font-size:.8rem; margin-top:12px;}
+  h2{
+    font-size:1.32rem; margin:48px 0 14px; padding:10px 16px;
+    background:var(--accent); color:#fff; border-radius:8px;
+  }
+  h3{font-size:1.1rem; margin:30px 0 8px; color:var(--accent);
+    border-bottom:2px solid var(--accent-light); padding-bottom:5px;}
+  a{color:var(--accent);}
+  code{background:#eee; padding:2px 6px; border-radius:4px; font-size:.9em;
+    font-family:"Consolas","SFMono-Regular",monospace;}
+  pre{
+    background:var(--code-bg); color:var(--code-ink); padding:16px 18px;
+    border-radius:10px; overflow-x:auto; font-size:.86rem; line-height:1.6;
+    font-family:"Consolas","SFMono-Regular",monospace;
+  }
+  pre code{background:none; padding:0; color:inherit; font-size:1em;}
+  .box{border-radius:10px; padding:14px 18px; margin:16px 0; border-left:6px solid;}
+  .tip{background:#e8f5e9; border-color:var(--ok);}
+  .warn{background:#fff3e0; border-color:var(--warn);}
+  .danger{background:#ffebee; border-color:var(--danger);}
+  .note{background:var(--accent-light); border-color:var(--accent);}
+  .box .label{font-weight:700; display:block; margin-bottom:4px;}
+  .tip .label{color:var(--ok);} .warn .label{color:var(--warn);}
+  .danger .label{color:var(--danger);} .note .label{color:var(--accent);}
+  table{border-collapse:collapse; width:100%; margin:16px 0; font-size:.92rem;
+    background:#fff; border-radius:8px; overflow:hidden;}
+  th,td{border:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top;}
+  th{background:var(--accent-light); color:var(--accent);}
+  tr:nth-child(even) td{background:#faf9fd;}
+  .steps{counter-reset:step; list-style:none; padding:0;}
+  .steps > li{
+    position:relative; padding:4px 0 22px 52px; margin:0; counter-increment:step;
+    border-left:2px dashed var(--accent-light); margin-left:18px;
+  }
+  .steps > li::before{
+    content:counter(step); position:absolute; left:-18px; top:0;
+    width:36px; height:36px; border-radius:50%; background:var(--accent); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-weight:700;
+  }
+  .steps > li:last-child{border-left:2px solid transparent;}
+  .steps h3{margin-top:2px; border:none;}
+  .toc{background:#fff; border:1px solid var(--line); border-radius:10px; padding:16px 22px;}
+  .toc ol{margin:6px 0; padding-left:22px;}
+  .toc a{text-decoration:none;}
+  .toc a:hover{text-decoration:underline;}
+  .flow{background:#fff; border:1px solid var(--line); border-radius:10px;
+    padding:18px; font-family:monospace; font-size:.85rem; white-space:pre; overflow-x:auto;}
+  kbd{background:#333; color:#fff; border-radius:4px; padding:1px 7px; font-size:.85em;}
+  .pill{display:inline-block; background:var(--accent-light); color:var(--accent);
+    border-radius:6px; padding:1px 8px; font-size:.85em; font-weight:600;}
+  footer{text-align:center; color:var(--muted); font-size:.85rem; margin-top:50px;}
+  .big-say{background:#fff; border:2px dashed var(--accent); border-radius:10px;
+    padding:14px 18px; margin:12px 0; font-size:1.02rem;}
+  .big-say::before{content:"💬 Claude Codeにこう指示："; display:block; font-weight:700;
+    color:var(--accent); font-size:.85rem; margin-bottom:6px;}
+  .checklist{list-style:none; padding:0; margin:18px 0;}
+  .checklist li{background:#fff; border:1px solid var(--line); border-left:5px solid var(--accent);
+    border-radius:8px; padding:12px 14px 12px 46px; margin:9px 0; position:relative;}
+  .checklist li::before{content:"☐"; position:absolute; left:14px; top:9px;
+    font-size:1.3rem; color:var(--accent); line-height:1.4;}
+  .checklist .why{display:block; color:var(--muted); font-size:.85rem; margin-top:3px;}
+  .checklist b{color:var(--accent);}
+</style>
+</head>
+<body>
+<header>
+  <h1>介護福祉士　4択クイズ動画　作成マニュアル</h1>
+  <p>はじめての人でも、このとおりに進めれば1本作れます</p>
+  <span class="badge">対象：このプロジェクトを初めて触る人</span>
+</header>
+
+<div class="wrap">
+
+<div class="box danger">
+  <span class="label">いちばんやってほしいこと（最優先）</span>
+  今おねがいしたいのは、動画を最後まで作ることではありません。<br>
+  <b>「FourChoiceData.tsx」に入っている4択クイズの問題が、ちゃんと良い問題になっているかをチェックする</b>ことです。
+  具体的には次の3つを見ます（→ <a href="#check">4章</a>でくわしく）：
+  <ol style="margin:8px 0 0;">
+    <li><b>問題文や選択肢が長すぎないか</b>（パッと読める短さか）</li>
+    <li><b>変な問題になっていないか</b>（日本語が不自然・答えが間違い・解説と矛盾など）</li>
+    <li><b>知識がなくても解けてしまわないか</b>（答えだけ明らかに浮く・消去法で当てられる等）</li>
+  </ol>
+</div>
+
+<div class="box note">
+  <span class="label">音声（Voicepeak）は今はやりません</span>
+  音声の録音（Voicepeak）や動画の書き出しは、<b>今回はいったん飛ばします</b>。
+  <b>今後おねがいするかもしれません</b>が、まずは上の「問題チェック」に集中してください。
+</div>
+
+<h2 id="toc">目次</h2>
+<div class="toc">
+  <ol>
+    <li><a href="#what">これは何を作るもの？</a></li>
+    <li><a href="#whole">全体の流れ（今やること／今後やること）</a></li>
+    <li><a href="#setup">準備：最初の1回だけやること</a></li>
+    <li><a href="#check"><b>★ いちばんの仕事：問題チェック</b></a></li>
+    <li><a href="#later">（今後）音声・動画の書き出しについて</a></li>
+    <li><a href="#save">最新を取り込む（pull）／保存する（push）</a></li>
+    <li><a href="#trouble">困ったときは（よくある質問）</a></li>
+    <li><a href="#ref">資料：用語・ルール早見表</a></li>
+  </ol>
+</div>
+
+<!-- ============================================ -->
+<h2 id="what">1. これは何を作るもの？</h2>
+<p>
+このプロジェクトは、<b>介護福祉士試験の対策用「4択クイズ動画」</b>（縦型・スマホ向け／Instagramリール等）を作る仕組みです。
+1本の動画には <b>3〜4問</b> の4択クイズが入り、問題→考える時間→答え→解説、という流れでキャラクターが進行します。
+</p>
+<p>
+すでに <b>動く見本</b> が入っています。まずはこれを開いて「こういうものを作るんだ」とイメージをつかんでください。
+</p>
+<table>
+  <tr><th>見本の場所</th><td><code>datas/kaigo/ninchisho_rikai/four_choice/</code>（科目：認知症の理解）</td></tr>
+  <tr><th>できあがる動画</th><td>同じフォルダの <code>01-output.mp4</code>, <code>02-output.mp4</code></td></tr>
+</table>
+
+<div class="box tip">
+  <span class="label">迷ったらこの見本をマネする</span>
+  新しい科目を作るときも、この <code>ninchisho_rikai</code> フォルダと同じ形をマネすれば失敗しません。
+  分からなくなったら「<code>ninchisho_rikai</code> の見本と同じようにして」とClaudeに言えばOKです。
+</div>
+
+<!-- ============================================ -->
+<h2 id="whole">2. 全体の流れ（今やること／今後やること）</h2>
+<div class="flow">━━━━━━ ★ 今おねがいすること ━━━━━━
+
+①FourChoiceData.tsx の問題をチェックする
+   ├─ 問題文・選択肢が長すぎないか
+   ├─ 変な問題になっていないか
+   └─ 知識がなくても解けてしまわないか
+   ▼
+②直したいところは Claude に伝えて直してもらう
+   ▼
+③チェックが済んだら保存（git）
+
+━━━━━━ ◇ 今後おねがいするかも ━━━━━━
+
+④音声を録音する（Voicepeak）   ※今は飛ばす
+   ▼
+⑤動画を書き出す（レンダリング）   ※今は飛ばす
+   └─ 01-output.mp4 が完成</div>
+
+<div class="box note">
+  <span class="label">いまは①〜③だけ</span>
+  この説明書のうち、今やるのは <b>「4章 問題チェック」</b> と <b>「6章 保存」</b> だけです。
+  音声・動画書き出し（④⑤）は <b>今後おねがいするかもしれない</b>部分なので、5章は読み飛ばしてOKです。
+</div>
+
+<!-- ============================================ -->
+<h2 id="setup">3. 準備：最初の1回だけやること</h2>
+<p>パソコンを変えたとき・初めて開いたときの初期設定です。<b>1回やれば次回からは不要</b>です。</p>
+
+<ol class="steps">
+  <li>
+    <h3>プロジェクトのフォルダを開く</h3>
+    VS Code で、このプロジェクトのフォルダ（<code>hoiku_kaigo</code>）を <b>そのまま開きます</b>。
+    （以前は「devcontainer（コンテナ）」を使っていましたが、<b>今はそのまま開く方法でOK</b>です。）
+    <div class="box tip"><span class="label">Node.js が必要です</span>
+    動かすには <b>Node.js</b>（バージョン20以上が目安）がパソコンに入っている必要があります。
+    入っているか分からないときは、ターミナルで <code>node -v</code> と打って番号が出ればOK。
+    出なければ <a href="https://nodejs.org/" target="_blank">nodejs.org</a> から入れるか、用意した人にお願いしてください。</div>
+  </li>
+  <li>
+    <h3>必要な部品を入れる（npm install）</h3>
+    フォルダを開いたら、ターミナル（画面下の入力欄）に次を打ちます。最初の1回だけ数分かかります。
+    <pre><code>npm install</code></pre>
+  </li>
+  <li>
+    <h3>（今はやらない）音声ソフトの準備</h3>
+    音声の読み上げ（Voicepeak）は<b>今回は使いません</b>。今後おねがいするときに案内します（→ <a href="#later">5章</a>）。
+  </li>
+</ol>
+
+<!-- ============================================ -->
+<h2 id="check">4. ★ いちばんの仕事：問題チェック</h2>
+<p>
+ここが今回いちばんやってほしい作業です。
+1問ずつ、下の<b>チェックリスト</b>に沿って見て、直したいところがあれば <b>Claude Code に指示して直してもらう</b>——これだけです。</p>
+
+<div class="box danger">
+  <span class="label">見るファイルは「.tsx」です（.md ではありません）</span>
+  チェック・修正の対象は、各科目フォルダの中の <b><code>NN-FourChoiceData.tsx</code></b>（例：<code>01-FourChoiceData.tsx</code>）です。<br>
+  <code>.md</code> ファイル（<code>ichimondittou.md</code> / <code>qa.md</code>）は<b>今回は見なくてOK</b>です。
+</div>
+<table>
+  <tr><th>チェックするファイル</th><td><b><code>datas/kaigo/ninchisho_rikai/four_choice/01-FourChoiceData.tsx</code></b> など（<code>02-…</code><code>03-…</code>も同様）</td></tr>
+  <tr><th>1ファイル</th><td>動画1本ぶん（4択クイズが3〜4問）</td></tr>
+  <tr><th>直し方</th><td>自分で書き換えない。<b>Claude Code に「ここを直して」と指示</b>する</td></tr>
+</table>
+
+<h3>ファイルの読み方（1問のかたまり）</h3>
+<p>ファイルを開くと、1問が次のようなかたまりで並んでいます。見るのは <b>4か所だけ</b>です。</p>
+<pre><code>{
+    question: '認知症のBPSDの特徴は?',                         ← ①問題文
+    choices: ['認知症患者に必ず出現する',                       ← ②選択肢（4つ）
+              '環境やケアが要因となり現れる',
+              '中核症状に分類される',
+              '進行に伴い必ず重度化する'],
+    correctIndex: 1,        ← ③正解の番号（0=1つ目, 1=2つ目, 2=3つ目, 3=4つ目）
+    explanation: 'BPSDは…適切な対応で改善も期待できる。',       ← ④解説
+    questionAudio: ...  questionDuration: ...                    ← ※音声用。今は見なくてOK
+}</code></pre>
+<div class="box warn"><span class="label">「correctIndex」だけ注意</span>
+  正解は <code>correctIndex</code> の<b>数字</b>で決まります。<b>0=1つ目／1=2つ目／2=3つ目／3=4つ目</b>です。
+  上の例は <code>correctIndex: 1</code> なので、正解は2つ目の「環境やケアが要因となり現れる」です。
+</div>
+
+<h3>チェックリスト（1問ごとに上から確認）</h3>
+<p>各問題（<code>question</code> から <code>explanation</code> までのかたまり）ごとに、次を上から見ていきます。
+1つでも「あやしい」と思ったら、その問題を Claude Code に直してもらいます。</p>
+
+<ul class="checklist">
+  <li><b>問題文は短い？</b>　パッと一目で読める長さか（だらだら2〜3文になっていないか）
+    <span class="why">▶ 長い・説明的なら「もっと短く」</span></li>
+  <li><b>選択肢4つの長さのバランスは崩れてない？</b>　1つだけ突出して長い／短いものがないか（4つとも同じくらいなら、長め・短めどちらでもOK）
+    <span class="why">▶ バランスが悪ければ「長さをそろえて」</span></li>
+  <li><b>正解だけ目立ってない？</b>　正解だけ長い／正解だけ丁寧な言い回し、になっていないか
+    <span class="why">▶ これがあると知識なしでも正解が“バレる”。一番ありがちなNG</span></li>
+  <li><b>消去法で解けてしまわない？</b>　誤答3つが明らかにありえない／「必ず・絶対」で簡単に切れる、になっていないか
+    <span class="why">▶ あれば「誤答ももっともらしく直して」</span></li>
+  <li><b>答えが問題文に透けてない？</b>　問題文の中に答えがそのまま書かれていないか／選択肢に同じ意味のものが2つないか
+    <span class="why">▶ あれば「答えが透けないよう問題文か選択肢を直して」</span></li>
+  <li><b>解説が長すぎない？</b>　1〜2文くらいに収まっているか
+    <span class="why">▶ 長ければ「解説を短くまとめて」</span></li>
+</ul>
+
+<div class="box tip"><span class="label">いちばん大事なのは上から3番目</span>
+  「<b>正解だけ長い・正解だけ言い回しが丁寧</b>」は、介護を知らない人でも当てられてしまう典型パターンです。
+  4つの選択肢が同じくらいの長さ・同じ調子でそろっているか、を特に意識して見てください。
+</div>
+
+<h3>直したいときは Claude Code に指示する</h3>
+<p>自分でファイルを書き換える必要はありません。<b>どのファイルの何問目を、どう直したいか</b>を Claude Code に伝えるだけでOKです。</p>
+<div class="big-say">
+  「<code>01-FourChoiceData.tsx</code> の3問目、選択肢が長すぎる。短くそろえて。」
+</div>
+<div class="big-say">
+  「<code>01-FourChoiceData.tsx</code> の2問目、正解だけ言い回しが丁寧で<b>知識なしでも当てられる</b>。誤答ももっともらしく直して。」
+</div>
+<div class="big-say">
+  「<code>01-FourChoiceData.tsx</code> の1問目、<code>correctIndex</code> が答えと合っていない気がする。確認して直して。」
+</div>
+<div class="box note"><span class="label">迷ったら丸ごと頼んでOK</span>
+  どこが悪いか言葉にしづらいときは「<b><code>01-FourChoiceData.tsx</code> の問題を全部チェックして、上のチェックリスト基準で直して</b>」とまとめて指示しても大丈夫です。
+  品質ルールはClaude Code側に登録済みです。
+</div>
+
+<!-- ============================================ -->
+<h2 id="later">5. （今後）音声・動画の書き出しについて</h2>
+<div class="box note"><span class="label">この章は今はやりません</span>
+  音声の録音（Voicepeak）と動画の書き出し（レンダリング）は<b>今回は飛ばします</b>。
+  <b>今後おねがいするかもしれない</b>ので、流れだけ軽く知っておけば十分です（読み飛ばしてOK）。
+</div>
+<p>将来やるときは、ざっくり次の順になります（くわしくは、そのときにあらためて案内します）：</p>
+<ol>
+  <li>録音用の台本 <code>qa.md</code> を <b>Voicepeak</b> で読み上げ、<code>audios/</code> に <code>NN-MM-voice.wav</code> 形式で保存する</li>
+  <li>「音声を入れたので長さを反映して」と Claude に頼む（<code>update_duration.py</code>）</li>
+  <li>「動画をレンダリングして」と Claude に頼む → <code>NN-output.mp4</code> が完成</li>
+</ol>
+
+<!-- ============================================ -->
+<h2 id="save">6. 最新を取り込む（pull）／保存する（push）</h2>
+<p>
+このプロジェクトは <b>GitHub</b>（<code>github.com/isihiro87/hoiku</code>）でみんなと共有しています。
+作業の<b>前に「最新を取り込む（pull）」</b>、作業の<b>後に「保存する（push）」</b>のが基本の流れです。</p>
+
+<h3>① 作業を始める前に：最新を取り込む（pull）</h3>
+<p>ほかの人が直した内容を取り込んでから始めます。これをしないと、古い状態のまま作業してしまいます。</p>
+
+<p><b>方法A：Claude Code に頼む（かんたん）</b></p>
+<div class="big-say">
+  「<b>GitHub から最新を pull して</b>。」
+</div>
+
+<p><b>方法B：VS Code の画面で操作する</b></p>
+<ol>
+  <li>左の <b>ブランチ／同期マーク</b>（画面左下に <code>main</code> と表示されている所）をクリック、または</li>
+  <li>左メニューの <b>ソース管理</b>（枝アイコン）→ 上の「<b>…</b>」→ <b>「プル（Pull）」</b>を選ぶ</li>
+</ol>
+
+<p><b>方法C：ターミナルで打つ</b></p>
+<pre><code>git pull</code></pre>
+
+<div class="box warn"><span class="label">pull のときに赤いメッセージが出たら</span>
+  自分の手元の変更とぶつかると、警告が出て止まることがあります。
+  そのときは<b>無理に進めず、メッセージをそのまま Claude Code に貼って</b>「これどうすればいい？」と聞いてください。
+  安全に解決してくれます。
+</div>
+
+<h3>② 作業が終わったら：保存する（push）</h3>
+<p>チェックや修正が終わったら、内容を保存して GitHub に送ります（他のパソコン・他の人にも反映されます）。</p>
+<div class="big-say">
+  「今日直した分を <b>git に保存（コミット）して push して</b>。」
+</div>
+
+<div class="box note"><span class="label">知っておくと安心</span>
+  ・「pull＝最新を受け取る」「push＝自分の変更を送る」とおぼえればOK。<br>
+  ・<b>毎回、始める前に pull、終わったら push</b>。これだけで他の人とぶつかりにくくなります。<br>
+  ・別PCで初めて始めるときは、<code>git clone https://github.com/isihiro87/hoiku.git</code> → フォルダを開く → <code>npm install</code>（→ <a href="#setup">3章</a>）。<br>
+  ・<code>chrome-headless-shell/</code> という重いフォルダはコピー不要です（無くても自動でダウンロードして動きます）。
+</div>
+
+<!-- ============================================ -->
+<h2 id="trouble">7. 困ったときは（よくある質問）</h2>
+
+<h3>Q. 何から手をつければいい？</h3>
+<p><code>datas/kaigo/ninchisho_rikai/four_choice/01-FourChoiceData.tsx</code> を開いて、<a href="#check">4章</a>の3つのポイントで上から1問ずつチェックするのが最初の仕事です。分からない行はそのままClaudeに貼って「これどういう意味？」と聞いてOKです。</p>
+
+<h3>Q. コマンドや専門用語が分からない</h3>
+<p>覚えなくて大丈夫です。やりたいことを<b>日本語でClaudeに言う</b>のが正攻法です。例：「動画を作りたい」「音声を入れ終わった」「保存して」。</p>
+
+<h3>Q. 問題を1問だけ直したい（もう一部は完成している）</h3>
+<p>「<b>01の3問目だけ直したい。ほかは触らないで</b>」と伝えてください。投稿済み・完成済みの動画を守る手順（ロック）がスキルに用意されています。誤答だけの修正なら音声の録り直しも不要です。</p>
+
+<h3>Q. 音声を録り直すと、ほかの番号もずれない？</h3>
+<table>
+  <tr><th>直した内容</th><th>録り直しが必要な音声</th></tr>
+  <tr><td>問題文を変えた</td><td>その<b>問題の音声だけ</b></td></tr>
+  <tr><td>正解の選択肢の文を変えた</td><td>その<b>答えの音声だけ</b></td></tr>
+  <tr><td>誤答（不正解の選択肢）だけ変えた</td><td><b>不要</b>（音声は変わらない）</td></tr>
+</table>
+
+<h3>Q. 新しい科目（例：「こころとからだのしくみ」など）を追加したい</h3>
+<p>
+新しい科目には<b>専用の色（テーマ）</b>を1つ追加する必要があります。これは少しコードを触るので、
+Claudeに <b>まるごとお願い</b>してください。</p>
+<div class="big-say">
+  「介護福祉士の新しい科目『〇〇』を追加したい。<b>科目スラッグと色（SubjectTheme）を追加して</b>、
+  <code>datas/kaigo/〇〇/four_choice/</code> を作って。<code>ninchisho_rikai</code> と同じ作りで。」
+</div>
+<p>色の設定は <code>src/components/rhythm/IchimonIttoBoard.tsx</code> にまとまっており、
+見本の <code>ninchisho_rikai</code>（深紫）がすでに追加済みなので、それをお手本に増やせます。</p>
+
+<h3>Q. レンダリングが失敗する／エラーが出た</h3>
+<p>エラーの文をそのままコピーしてClaudeに貼ってください。よくある原因は「音声ファイルの名前・番号ズレ」「audiosに足りない音声がある」です。</p>
+<div class="box warn"><span class="label">命令ファイル（render.sh）について</span>
+  <code>NN-render.sh</code> は<b>以前のコンテナ環境向けのパス</b>で書かれていることがあります。
+  そのまま動かすと失敗する場合があるので、レンダリングは<b>「このPCの環境でレンダリングして」とClaudeに頼む</b>のが確実です。
+  Claudeがこのパソコンに合わせて実行します。</div>
+
+<!-- ============================================ -->
+<h2 id="ref">8. 資料：用語・ルール早見表</h2>
+
+<h3>よく出るファイル・フォルダ</h3>
+<table>
+  <tr><th>名前</th><th>意味</th></tr>
+  <tr><td><code>datas/kaigo/</code></td><td>介護福祉士のデータを置く場所</td></tr>
+  <tr><td><code>[科目]/four_choice/</code></td><td>1つの科目の作業フォルダ</td></tr>
+  <tr><td><code>ichimondittou.md</code></td><td>4択の問題集（おおもと）</td></tr>
+  <tr><td><code>qa.md</code></td><td>録音用の読み上げ台本</td></tr>
+  <tr><td><code>audios/</code></td><td>録音した音声(.wav)を入れる場所</td></tr>
+  <tr><td><code>NN-FourChoiceData.tsx</code></td><td>動画N本目の問題データ</td></tr>
+  <tr><td><code>NN-render.sh</code></td><td>動画N本目を書き出す命令</td></tr>
+  <tr><td><code>NN-output.mp4</code></td><td><b>完成した動画</b></td></tr>
+  <tr><td><code>NN-post_instagram.txt</code></td><td>投稿用の紹介文</td></tr>
+</table>
+
+<h3>音声ファイル名のルール</h3>
+<p><span class="pill">NN-MM-voice.wav</span> &nbsp; NN=動画番号 / MM=00からの通し番号（問題→答えの順）</p>
+<pre><code>01-00-voice.wav  ← 1本目・問題1
+01-01-voice.wav  ← 1本目・答え1
+01-02-voice.wav  ← 1本目・問題2
+01-03-voice.wav  ← 1本目・答え2
+   …
+02-00-voice.wav  ← 2本目・問題1</code></pre>
+
+<h3>1本の動画の作り（目安）</h3>
+<table>
+  <tr><th>項目</th><th>目安</th></tr>
+  <tr><td>1本あたりの問題数</td><td>3〜4問</td></tr>
+  <tr><td>動画の向き・サイズ</td><td>縦型 1080×1920（スマホ向け）</td></tr>
+  <tr><td>使うエンジン</td><td>FourChoiceShorts（4択）</td></tr>
+  <tr><td>キャラクターの性別</td><td>タイトルに「社会福祉士」が含まれると男性、それ以外は女性</td></tr>
+</table>
+
+<h3>Claudeへの頼みかた（コピペ用まとめ）</h3>
+<table>
+  <tr><th>やりたいこと</th><th>こう言えばOK</th></tr>
+  <tr><td>問題を作る</td><td>「介護福祉士〇〇の4択を、ninchisho_rikaiと同じ形式で作って」</td></tr>
+  <tr><td>ファイル一式を作る</td><td>「このichimondittou.mdから4択ファイル一式を生成して」</td></tr>
+  <tr><td>音声の長さを反映</td><td>「音声を入れたのでupdate_duration.pyを実行して」</td></tr>
+  <tr><td>動画を書き出す</td><td>「このフォルダの動画をレンダリングして」</td></tr>
+  <tr><td>保存する</td><td>「gitにコミットしてpushして」</td></tr>
+  <tr><td>一部だけ直す</td><td>「01の3問目だけ直して、ほかは触らないで」</td></tr>
+</table>
+
+<div class="box tip"><span class="label">最後にひとこと</span>
+  完璧に理解してから始める必要はありません。<b>見本をマネして1本作る</b>のが一番の近道です。
+  途中で止まったら、その状況をそのままClaudeに伝えてください。
+</div>
+
+<footer>
+  介護福祉士 4択クイズ動画 作成マニュアル ／ このファイルは <code>KAIGO_MANUAL.html</code> です
+</footer>
+
+</div>
+</body>
+</html>
