@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """音声配置後、各 FourChoiceData.tsx の duration を実音声から計算して更新する"""
-import os, re, subprocess, math
+import os, re, subprocess, math, glob
 
 BASE = "/workspaces/hoiku_shiken/datas/kaigo/ninchisho_rikai/four_choice"
 TOPIC = "voice"
@@ -20,10 +20,12 @@ def get_frames(path):
 
 def main():
     for num, name, count in SECTIONS:
-        path = f"{BASE}/{num}-FourChoiceData.tsx"
-        if not os.path.exists(path):
-            print(f"skip: {path}")
+        # .reviewed 等のマーカー付き名にも対応（NN-FourChoiceData*.tsx をグロブ解決）
+        matches = sorted(glob.glob(f"{BASE}/{num}-FourChoiceData*.tsx"))
+        if not matches:
+            print(f"skip: {num}-FourChoiceData*.tsx")
             continue
+        path = matches[0]
         with open(path) as f:
             text = f.read()
         # セクション内クリップは NN-MM-voice.wav（MM=00始まり、Q/A交互）

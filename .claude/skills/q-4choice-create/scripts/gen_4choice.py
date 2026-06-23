@@ -378,8 +378,8 @@ mkdir -p "$TEMP_DIR/audio/explain"
 
 cp public/audio/bgm.mp3 "$TEMP_DIR/audio/"
 
-# データファイルをsrcにコピー
-cp {base}/{num}-FourChoiceData.tsx /workspaces/hoiku_shiken/src/FourChoiceData.tsx
+# データファイルをsrcにコピー（.reviewed 等のマーカー付き名にも対応）
+cp {base}/{num}-FourChoiceData*.tsx /workspaces/hoiku_shiken/src/FourChoiceData.tsx
 
 # 同梱Chromeが在る環境（devcontainer）ではそれを使い、無い環境（別PC等）では
 # remotion同梱のChromeを自動利用する。これで環境ごとの手動切替が不要。
@@ -455,7 +455,7 @@ def gen_update_script(cfg):
     sections_repr = repr(cfg['sections'])
     content = f"""#!/usr/bin/env python3
 \"\"\"音声配置後、各 FourChoiceData.tsx の duration を実音声から計算して更新する\"\"\"
-import os, re, subprocess, math
+import os, re, subprocess, math, glob
 
 BASE = "{base}"
 TOPIC = "{topic}"
@@ -472,11 +472,13 @@ def get_frames(path):
 def main():
     audio_idx = 0
     for num, name, count in SECTIONS:
-        path = f"{{BASE}}/{{num}}-FourChoiceData.tsx"
-        if not os.path.exists(path):
-            print(f"skip: {{path}}")
+        # .reviewed 等のマーカー付き名にも対応（NN-FourChoiceData*.tsx をグロブ解決）
+        matches = sorted(glob.glob(f"{{BASE}}/{{num}}-FourChoiceData*.tsx"))
+        if not matches:
+            print(f"skip: {{num}}-FourChoiceData*.tsx")
             audio_idx += count
             continue
+        path = matches[0]
         with open(path) as f:
             text = f.read()
         # 各シーンの questionDuration / answerDuration を順番に置き換え
