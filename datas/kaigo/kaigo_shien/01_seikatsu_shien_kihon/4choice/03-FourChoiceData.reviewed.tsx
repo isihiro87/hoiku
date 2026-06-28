@@ -45,7 +45,7 @@ export const fourChoiceData: FourChoiceScene[] = [
     {
         id: 'q3',
         question: '視覚障害者の誘導で、利用者につかんでもらう場所は？',
-        choices: ['利用者自身の腕', '介助者の肩', '介助者の肘の少し上', '介助者の手首'],
+        choices: ['介助者の手のひら', '介助者の肩', '介助者の肘の少し上', '介助者の手首'],
         correctIndex: 2,
         explanation: '視覚障害者の誘導では、利用者に介助者の肘の少し上をつかんでもらい、白杖を持つ手の反対側の半歩前に立つのが基本。',
         questionAudio: 'audio/explain/03_05-voice.wav',

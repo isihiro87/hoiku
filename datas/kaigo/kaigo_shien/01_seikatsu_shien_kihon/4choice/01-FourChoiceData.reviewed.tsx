@@ -34,7 +34,7 @@ export const fourChoiceData: FourChoiceScene[] = [
     {
         id: 'q2',
         question: '点眼後に軽く押さえる目の部位は？',
-        choices: ['まぶた', '目尻', 'こめかみ', '涙点（目頭）'],
+        choices: ['まぶた', '目尻', 'こめかみ', '目頭'],
         correctIndex: 3,
         explanation: '点眼後は薬の効果を高めるため、しばらく目を閉じて涙点（目頭）を軽く押さえる。複数の点眼薬は5分程度の間隔をおく。',
         questionAudio: 'audio/explain/01_03-voice.wav',

@@ -23,7 +23,7 @@ export const fourChoiceData: FourChoiceScene[] = [
     {
         id: 'q1',
         question: '支持基底面や重心移動、てこの原理を活用する技術は？',
-        choices: ['ボディメカニクス', 'バイオフィードバック', 'ノーマライゼーション', 'リハビリテーション'],
+        choices: ['ボディメカニクス', 'エンパワメント', 'ノーマライゼーション', 'リハビリテーション'],
         correctIndex: 0,
         explanation: '移動の介護では、支持基底面を広くとる、重心を近づけ低くする、大きな筋群を活用するなどボディメカニクスを活用する。',
         questionAudio: 'audio/explain/02_01-voice.wav',
@@ -45,7 +45,7 @@ export const fourChoiceData: FourChoiceScene[] = [
     {
         id: 'q3',
         question: '仰臥位から側臥位にするとき、膝を曲げて倒す順番は？',
-        choices: ['頭→足', '膝→肩', '肩→膝', '足→頭'],
+        choices: ['足→膝', '膝→肩', '肩→膝', '腰→肩'],
         correctIndex: 1,
         explanation: '体位変換は身体の自然な動きに従い、膝→肩の順に倒すと骨盤が回転し、上体も自然に回転しやすくなる。',
         questionAudio: 'audio/explain/02_05-voice.wav',
