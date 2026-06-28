@@ -12,3 +12,6 @@ chrome-headless-shell/
 # 生成物の動画（qas.md/tsx + 音声から再生成可能）
 *-output.mp4
 output.mp4
+
+# 教材の元PDF（スキャン・大容量。問題tsxの生成元だがリポジトリには含めない）
+datas/kaigo/*.pdf
