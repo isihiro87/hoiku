@@ -22,10 +22,10 @@ export interface FourChoiceScene {
 export const fourChoiceData: FourChoiceScene[] = [
     {
         id: 'q1',
-        question: '睡眠薬を服用するときに、一緒にとるのを避けるべきものは？',
-        choices: ['アルコール', '水', '白湯', 'ぬるま湯'],
+        question: '睡眠薬を服用するときに、最も適している飲み物は？',
+        choices: ['水', 'アルコール', '牛乳', 'グレープフルーツジュース'],
         correctIndex: 0,
-        explanation: '睡眠薬をアルコールで服用すると薬の作用が強まり、ふらつきなどが生じることがある。水か白湯で服用する。',
+        explanation: '薬は原則として水か白湯（ぬるま湯）で服用する。アルコールは作用を強め、牛乳やグレープフルーツジュースは薬の吸収・代謝に影響して作用が変わることがあるため避ける。',
         questionAudio: 'audio/explain/02_01-voice.wav',
         questionDuration: 60,
         answerAudio: 'audio/explain/02_02-voice.wav',
