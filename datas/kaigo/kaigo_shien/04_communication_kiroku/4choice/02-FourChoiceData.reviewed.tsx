@@ -44,10 +44,10 @@ export const fourChoiceData: FourChoiceScene[] = [
     },
     {
         id: 'q3',
-        question: '介護における記録の役割として正しいのは？',
-        choices: ['評価には用いない', '介護計画には使えない', '情報伝達や現任教育に役立つ', '同職種だけで秘匿する'],
+        question: '介護記録の取り扱いとして正しいのは？',
+        choices: ['本人や家族に開示しない', '誤記は修正液で消す', '多職種で情報共有する', '主観を中心に書く'],
         correctIndex: 2,
-        explanation: '記録は多職種間の情報伝達、介護計画を立てる資料、介護福祉士の現任教育の教材として役立つ。',
+        explanation: '記録は多職種間の情報共有や現任教育に活用する。客観的事実を中心に書き、誤記は二重線で訂正（修正液は不可）、利用者本人の開示請求の対象にもなる。',
         questionAudio: 'audio/explain/02_05-voice.wav',
         questionDuration: 60,
         answerAudio: 'audio/explain/02_06-voice.wav',

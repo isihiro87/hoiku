@@ -23,7 +23,7 @@ export const fourChoiceData: FourChoiceScene[] = [
     {
         id: 'q1',
         question: '入浴直前の浴槽の湯の適切な温度は？',
-        choices: ['45℃', '40℃', '42℃', '38℃'],
+        choices: ['46℃', '40℃', '43℃', '36℃'],
         correctIndex: 1,
         explanation: '入浴直前の浴槽の湯は40℃で保温する。空腹時の入浴は貧血を起こすおそれがあるため控える。',
         questionAudio: 'audio/explain/02_01-voice.wav',

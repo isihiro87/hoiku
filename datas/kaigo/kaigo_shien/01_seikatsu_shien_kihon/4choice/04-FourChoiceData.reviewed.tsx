@@ -23,7 +23,7 @@ export const fourChoiceData: FourChoiceScene[] = [
     {
         id: 'q1',
         question: 'ベッドから車いすへの移乗介護で、最初に行うことは？',
-        choices: ['ベッドの高さ調節', '衣服の着替え', '車いすの位置調整', '目的を説明して同意を得る'],
+        choices: ['ベッドの高さ調節', 'ブレーキの固定', '車いすの位置調整', '目的を説明して同意を得る'],
         correctIndex: 3,
         explanation: '移乗介護ではまず利用者に介護の目的を説明し、理解・同意を得てから行う。あわせて気分や体調の確認も行う。',
         questionAudio: 'audio/explain/04_01-voice.wav',

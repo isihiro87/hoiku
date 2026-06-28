@@ -22,10 +22,10 @@ export interface FourChoiceScene {
 export const fourChoiceData: FourChoiceScene[] = [
     {
         id: 'q1',
-        question: '表情やしぐさ、動作など言葉以外で伝える伝達を何という？',
-        choices: ['フィードバック', '言語的コミュニケーション', '非言語的コミュニケーション', '準言語'],
+        question: '次のうち、非言語的コミュニケーションにあたるのは？',
+        choices: ['会話の内容', '手紙の文章', '表情やうなずき', '点字'],
         correctIndex: 2,
-        explanation: 'コミュニケーションの基本は、言葉だけでなく表情やしぐさなど非言語的コミュニケーションにも注意して聞くこと。',
+        explanation: '表情・しぐさ・視線・うなずきなど、言葉によらない伝達が非言語的コミュニケーション。会話・手紙・点字は言語を用いる言語的コミュニケーション。',
         questionAudio: 'audio/explain/01_01-voice.wav',
         questionDuration: 60,
         answerAudio: 'audio/explain/01_02-voice.wav',
