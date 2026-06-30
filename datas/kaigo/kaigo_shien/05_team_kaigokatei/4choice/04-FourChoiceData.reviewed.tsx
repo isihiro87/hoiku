@@ -23,7 +23,7 @@ export const fourChoiceData: FourChoiceScene[] = [
     {
         id: 'q1',
         question: 'チームアプローチで大切なことは？',
-        choices: ['専門職以外は除く', '連携せず独自に動く', 'チーム全員が共通認識をもつ', '他職種の理解は不要'],
+        choices: ['判断は医師に一任', '情報は職種ごとに管理', '全員が共通認識をもつ', '方針はリーダーが決定'],
         correctIndex: 2,
         explanation: '職種により関わり方が異なるため、チーム全員が共通認識をもち、互いの専門性や立場を尊重することが大切。',
         questionAudio: 'audio/explain/04_01-voice.wav',

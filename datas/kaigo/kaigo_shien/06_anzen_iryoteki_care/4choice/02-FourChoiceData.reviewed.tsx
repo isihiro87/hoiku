@@ -22,10 +22,10 @@ export interface FourChoiceScene {
 export const fourChoiceData: FourChoiceScene[] = [
     {
         id: 'q1',
-        question: '経管栄養の準備で、感染予防のため必ず行うのは？',
-        choices: ['アルコール消毒のみ', '手洗いは省略する', '石けんと流水での手洗い', '口腔ケアの省略'],
+        question: '経管栄養の感染予防として適切なのは？',
+        choices: ['栄養剤を作り置きする', '容器は水洗いで再使用', '実施前に手を洗う', '栄養剤を常温で放置'],
         correctIndex: 2,
-        explanation: '経管栄養の実施時は感染予防のため、石けんと流水で丁寧に手を洗ってから準備を行う。',
+        explanation: '実施前は石けんと流水で丁寧に手を洗う。栄養剤の作り置き・常温放置や、容器を水洗いのみで再使用するのは細菌繁殖や汚染の原因となり不適切。',
         questionAudio: 'audio/explain/02_01-voice.wav',
         questionDuration: 60,
         answerAudio: 'audio/explain/02_02-voice.wav',

@@ -34,7 +34,7 @@ export const fourChoiceData: FourChoiceScene[] = [
     {
         id: 'q2',
         question: '利用者の死後にケアを振り返り、悲しみを共有する場を何という？',
-        choices: ['スーパービジョン', 'デスカンファレンス', 'グリーフケア', 'サービス担当者会議'],
+        choices: ['スーパービジョン', 'デスカンファレンス', 'ケアカンファレンス', 'サービス担当者会議'],
         correctIndex: 1,
         explanation: 'デスカンファレンスは、利用者の死後にケアを振り返り、悲しみを共有して次のケアに活かす場。',
         questionAudio: 'audio/explain/03_03-voice.wav',
@@ -45,7 +45,7 @@ export const fourChoiceData: FourChoiceScene[] = [
     {
         id: 'q3',
         question: '遺族を支え、悲しみを乗り越えて新たな生活を送れるよう支援することを何という？',
-        choices: ['デスカンファレンス', 'ターミナルケア', 'グリーフケア', 'レスパイトケア'],
+        choices: ['エンゼルケア', 'ターミナルケア', 'グリーフケア', 'レスパイトケア'],
         correctIndex: 2,
         explanation: 'グリーフケアは「悲嘆」のケアともいわれ、利用者が亡くなった後も遺族を支える支援のこと。',
         questionAudio: 'audio/explain/03_05-voice.wav',

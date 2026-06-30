@@ -34,9 +34,9 @@ export const fourChoiceData: FourChoiceScene[] = [
     {
         id: 'q2',
         question: '感染予防の3原則は、感染源の排除・感染経路の遮断とあと一つは？',
-        choices: ['手洗いの中止', '予防接種の義務化', '利用者の抵抗力の向上', '面会の全面禁止'],
+        choices: ['手指衛生の励行', '環境表面の定期消毒', '宿主の抵抗力の向上', '標準予防策の徹底'],
         correctIndex: 2,
-        explanation: '感染予防の3原則は、感染源の排除、感染経路の遮断、利用者の感染に対する抵抗力の向上である。',
+        explanation: '感染予防の3原則は、感染源の排除、感染経路の遮断、宿主の感染に対する抵抗力の向上である。',
         questionAudio: 'audio/explain/01_03-voice.wav',
         questionDuration: 60,
         answerAudio: 'audio/explain/01_04-voice.wav',

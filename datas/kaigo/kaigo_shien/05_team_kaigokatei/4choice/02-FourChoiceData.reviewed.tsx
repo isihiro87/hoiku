@@ -34,7 +34,7 @@ export const fourChoiceData: FourChoiceScene[] = [
     {
         id: 'q2',
         question: '利き手の交換が該当するリハビリテーションの領域は？',
-        choices: ['社会的リハビリテーション', '教育的リハビリテーション', '職業的リハビリテーション', '医学的リハビリテーション'],
+        choices: ['社会的', '教育的', '職業的', '医学的'],
         correctIndex: 3,
         explanation: '利き手の交換は、補償的な機能を伸ばす医学的リハビリテーションに該当する。リハビリには4つの領域がある。',
         questionAudio: 'audio/explain/02_03-voice.wav',
