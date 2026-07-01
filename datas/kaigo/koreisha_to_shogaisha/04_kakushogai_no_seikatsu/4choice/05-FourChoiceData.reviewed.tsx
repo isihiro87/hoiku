@@ -33,8 +33,8 @@ export const fourChoiceData: FourChoiceScene[] = [
     },
     {
         id: 'q2',
-        question: '高次脳機能障害と診断された場合に申請できる手帳は？',
-        choices: ['身体障害者手帳', '精神障害者保健福祉手帳', '愛の手帳', '療育手帳'],
+        question: '高次脳機能障害と診断された場合に申請できるものは？',
+        choices: ['身体障害者手帳', '精神障害者保健福祉手帳', '介護保険被保険者証', '療育手帳'],
         correctIndex: 1,
         explanation: '高次脳機能障害は事故や脳血管障害など後天的要因で生じ、精神障害者保健福祉手帳などを申請できる。',
         questionAudio: 'audio/explain/05_03-voice.wav',
@@ -44,7 +44,7 @@ export const fourChoiceData: FourChoiceScene[] = [
     },
     {
         id: 'q3',
-        question: '2013年に障害者の定義へ難病等を加え、障害福祉サービスの対象とした法律は？',
+        question: '障害者の定義に難病等を加え、福祉サービスの対象とした法律は？',
         choices: ['難病法', '身体障害者福祉法', '介護保険法', '障害者総合支援法'],
         correctIndex: 3,
         explanation: '2013（平成25）年、障害者総合支援法において障害者の定義に難病等が加わり、障害福祉サービス等を受けられるようになった。',

@@ -22,7 +22,7 @@ export interface FourChoiceScene {
 export const fourChoiceData: FourChoiceScene[] = [
     {
         id: 'q1',
-        question: '不眠や過眠など、BPSD（行動・心理症状）に分類される症状は？',
+        question: '次のうち、認知症のBPSD（行動・心理症状）に分類される症状は？',
         choices: ['病識の低下', '視覚認知障害', '性格の変化', '睡眠障害'],
         correctIndex: 3,
         explanation: '睡眠障害は不眠・過眠・睡眠覚醒リズムの障害などで、BPSDで現れる。視覚認知障害や性格の変化は中核症状。',

@@ -22,10 +22,10 @@ export interface FourChoiceScene {
 export const fourChoiceData: FourChoiceScene[] = [
     {
         id: 'q1',
-        question: '洋服を上手に着られなくなる失行を何という？',
+        question: '歯ブラシに歯磨き粉をつけて磨くなど、一連の動作がうまく行えなくなる失行は？',
         choices: ['失認', '着衣失行', '観念失行', '構成失行'],
-        correctIndex: 1,
-        explanation: '失行のうち、洋服を上手に着られないのが着衣失行。図形を描けない構成失行、複雑な動作ができない観念失行などがある。',
+        correctIndex: 2,
+        explanation: '道具を使った一連の動作ができなくなるのが観念失行。服を着られない着衣失行、図形を描けない構成失行などがある。',
         questionAudio: 'audio/explain/03_01-voice.wav',
         questionDuration: 60,
         answerAudio: 'audio/explain/03_02-voice.wav',
@@ -34,8 +34,8 @@ export const fourChoiceData: FourChoiceScene[] = [
     {
         id: 'q2',
         question: '物事を計画し、筋道を立てて遂行することが困難になる中核症状は？',
-        choices: ['自発性の低下', '不安・焦燥', '遂行機能障害', '嫉妬妄想'],
-        correctIndex: 2,
+        choices: ['遂行機能障害', '自発性の低下', '不安・焦燥', '嫉妬妄想'],
+        correctIndex: 0,
         explanation: '物事を総合的に考え計画し遂行することが困難になるのは、中核症状の遂行機能障害。不安・焦燥や嫉妬妄想はBPSDで現れる。',
         questionAudio: 'audio/explain/03_03-voice.wav',
         questionDuration: 60,

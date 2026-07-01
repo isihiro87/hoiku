@@ -47,7 +47,7 @@ export const fourChoiceData: FourChoiceScene[] = [
         question: '精神保健福祉法の精神障害者の定義に含まれる障害は？',
         choices: ['難病', '知的障害', '発達の遅れ', '身体障害'],
         correctIndex: 1,
-        explanation: '精神保健福祉法は精神障害者を、統合失調症や精神作用物質による急性中毒またはその依存症、知的障害、精神病質その他の精神疾患を有する者と定義しており、知的障害も含まれる。',
+        explanation: '精神保健福祉法の精神障害者の定義には、統合失調症や精神作用物質による依存症などのほか、知的障害も含まれる。',
         questionAudio: 'audio/explain/01_05-voice.wav',
         questionDuration: 60,
         answerAudio: 'audio/explain/01_06-voice.wav',

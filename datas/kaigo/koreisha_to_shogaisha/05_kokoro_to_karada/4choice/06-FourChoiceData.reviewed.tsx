@@ -33,7 +33,7 @@ export const fourChoiceData: FourChoiceScene[] = [
     },
     {
         id: 'q2',
-        question: '前立腺肥大症などで膀胱に尿が溜まると少しずつ漏れてしまう尿失禁は？',
+        question: '前立腺肥大症などで尿が少しずつ漏れる尿失禁は？',
         choices: ['溢流性尿失禁', '腹圧性尿失禁', '切迫性尿失禁', '機能性尿失禁'],
         correctIndex: 0,
         explanation: '溢流性尿失禁は、前立腺肥大症や尿道狭窄などによる尿道の通過障害で、尿が少しずつ漏れるものをいう。',

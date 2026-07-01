@@ -33,7 +33,7 @@ export const fourChoiceData: FourChoiceScene[] = [
     },
     {
         id: 'q2',
-        question: '他者に受け入れられ集団や社会に帰属したいという、マズローの欲求は？',
+        question: '孤立を避け、仲間や家族とのつながりを求めるマズローの欲求は？',
         choices: ['所属・愛情の欲求', '自己実現の欲求', '自尊の欲求', '生理的欲求'],
         correctIndex: 0,
         explanation: 'マズローの欲求階層説で、他者に受け入れられ家族や地域・社会に帰属することを求めるのが所属・愛情の欲求である。',

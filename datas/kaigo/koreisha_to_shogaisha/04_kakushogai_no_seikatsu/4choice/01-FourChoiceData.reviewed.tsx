@@ -22,7 +22,7 @@ export interface FourChoiceScene {
 export const fourChoiceData: FourChoiceScene[] = [
     {
         id: 'q1',
-        question: '紙などに文字を書いて読み合うコミュニケーション方法は？',
+        question: '中途失聴者など手話を習得していない人とのやりとりに適した方法は？',
         choices: ['手話', '口話', '筆談', '指文字'],
         correctIndex: 2,
         explanation: '紙などに文字を書いて読み合う方法を筆談という。人名や地名など手話で表しにくい言葉は指文字で表す。',
